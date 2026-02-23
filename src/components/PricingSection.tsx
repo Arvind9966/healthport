@@ -40,7 +40,7 @@ const plans = [
 
 const PricingSection = () => {
   return (
-    <section className="py-20">
+    <section className="py-24 md:py-32">
       <div className="container px-6 text-center">
         <h2 className="font-display text-3xl md:text-4xl italic mb-3">Flexible Plans for Every Patient</h2>
         <p className="text-muted-foreground mb-12">Pick the level of support that fits your needs and budget.</p>
