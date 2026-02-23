@@ -1,53 +1,24 @@
 import { FileText, Sparkles, SlidersHorizontal, CreditCard, Plane } from "lucide-react";
-
-const steps = [
-  {
-    num: "01",
-    icon: FileText,
-    title: "Share Your Medical Reports",
-    tag: "Quick & Confidential",
-    desc: "Upload your scans or reports — we'll review and respond within 24 hours.",
-  },
-  {
-    num: "02",
-    icon: Sparkles,
-    title: "Get a Personalized Treatment Plan",
-    tag: "Matched to Your Needs",
-    desc: "Our medical team recommends the best hospitals, doctors, and cost options.",
-  },
-  {
-    num: "03",
-    icon: SlidersHorizontal,
-    title: "Choose Your Experience Level",
-    tag: "Tailored Comfort",
-    desc: "Pick your accommodation, meal preferences, and any wellness add-ons.",
-  },
-  {
-    num: "04",
-    icon: CreditCard,
-    title: "Confirm & Book Securely",
-    tag: "Transparent Billing",
-    desc: "Pay only for travel and packages — hospital fees are billed directly to you.",
-  },
-  {
-    num: "05",
-    icon: Plane,
-    title: "Arrive, Heal & Recover",
-    tag: "We Handle the Rest",
-    desc: "Airport pickup, visa help, interpreter, and a personal coordinator by your side.",
-  },
-];
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const JourneySteps = () => {
+  const { t } = useLanguage();
+
+  const steps = [
+    { num: "01", icon: FileText, title: t("journey_step1_title"), tag: t("journey_step1_tag"), desc: t("journey_step1_desc") },
+    { num: "02", icon: Sparkles, title: t("journey_step2_title"), tag: t("journey_step2_tag"), desc: t("journey_step2_desc") },
+    { num: "03", icon: SlidersHorizontal, title: t("journey_step3_title"), tag: t("journey_step3_tag"), desc: t("journey_step3_desc") },
+    { num: "04", icon: CreditCard, title: t("journey_step4_title"), tag: t("journey_step4_tag"), desc: t("journey_step4_desc") },
+    { num: "05", icon: Plane, title: t("journey_step5_title"), tag: t("journey_step5_tag"), desc: t("journey_step5_desc") },
+  ];
+
   return (
     <section className="py-24 md:py-32" id="how-it-works">
       <div className="container px-6">
         <h2 className="font-display text-3xl md:text-4xl italic text-center mb-3">
-          Your Journey in 5 Simple Steps
+          {t("journey_title")}
         </h2>
-        <p className="text-muted-foreground text-center mb-14">
-          From first inquiry to full recovery — here's how we take care of everything.
-        </p>
+        <p className="text-muted-foreground text-center mb-14">{t("journey_subtitle")}</p>
 
         <div className="max-w-2xl mx-auto space-y-10">
           {steps.map(({ num, icon: Icon, title, tag, desc }) => (
