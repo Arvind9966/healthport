@@ -10,7 +10,7 @@ const features = [
 
 const FeaturesSection = () => {
   return (
-    <section className="py-20 bg-section-light">
+    <section className="py-24 md:py-32 bg-section-light">
       <div className="container px-6 text-center">
         <h2 className="font-display text-3xl md:text-4xl mb-3">
           Everything You Need, <span className="text-primary">One Platform</span>

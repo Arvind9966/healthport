@@ -2,7 +2,7 @@ import { ArrowRight, ExternalLink } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="relative py-24 md:py-32 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Decorative dots */}
       <div className="absolute inset-0 pointer-events-none">
         {Array.from({ length: 40 }).map((_, i) => (

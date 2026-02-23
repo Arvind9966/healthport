@@ -9,7 +9,7 @@ const HospitalNetwork = () => {
   const row2 = hospitals.slice(7);
 
   return (
-    <section className="py-20 bg-section-light" id="hospitals">
+    <section className="py-24 md:py-32 bg-section-light" id="hospitals">
       <div className="container px-6">
         <h2 className="font-display text-3xl md:text-4xl text-center mb-12">
           Our Trusted Hospital Network

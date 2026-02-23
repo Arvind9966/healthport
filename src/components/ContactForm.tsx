@@ -2,7 +2,7 @@ import { ArrowRight, Mail } from "lucide-react";
 
 const ContactForm = () => {
   return (
-    <section className="py-20" id="contact-us">
+    <section className="py-24 md:py-32" id="contact-us">
       <div className="container px-6 text-center">
         <h2 className="font-display text-3xl md:text-4xl mb-3">
           Get a Free <span className="text-primary">Treatment Estimate</span>

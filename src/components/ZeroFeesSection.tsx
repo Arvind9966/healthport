@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react";
 
 const ZeroFeesSection = () => {
   return (
-    <section className="py-20">
+    <section className="py-24 md:py-32">
       <div className="container px-6">
         <div className="bg-section-light rounded-3xl p-12 md:p-16 text-center">
           <h2 className="font-display text-3xl md:text-4xl mb-4">

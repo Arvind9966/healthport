@@ -40,7 +40,7 @@ const steps = [
 
 const JourneySteps = () => {
   return (
-    <section className="py-20" id="how-it-works">
+    <section className="py-24 md:py-32" id="how-it-works">
       <div className="container px-6">
         <h2 className="font-display text-3xl md:text-4xl italic text-center mb-3">
           Your Journey in 5 Simple Steps

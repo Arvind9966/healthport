@@ -14,7 +14,7 @@ const specialties = [
 
 const SpecialtiesSection = () => {
   return (
-    <section className="py-20" id="specialties">
+    <section className="py-24 md:py-32" id="specialties">
       <div className="container px-6">
         <h2 className="font-display text-3xl md:text-4xl text-center mb-3">
           Browse by <span className="text-primary">Specialty</span>
