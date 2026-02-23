@@ -1,49 +1,41 @@
 import { Check, X } from "lucide-react";
-
-const plans = [
-  {
-    name: "Essential Care",
-    price: "FREE",
-    badge: "Most Popular",
-    included: ["Treatment at partner hospital", "Doctor consultations & diagnostic workup"],
-    excluded: ["Dedicated care coordinator", "Premium accommodation & transfers", "Full concierge & VIP experience"],
-    highlight: true,
-  },
-  {
-    name: "Comfort Plan",
-    priceLabel: "Starting at",
-    price: "$1,200",
-    included: [
-      "Treatment + recovery stay included",
-      "Premium accommodation & transfers",
-      "Doctor consultations & diagnostic workup",
-      "Full concierge & VIP experience",
-    ],
-    excluded: ["Dedicated care coordinator"],
-    highlight: false,
-  },
-  {
-    name: "Premium Package",
-    priceLabel: "Starting at",
-    price: "$1,500",
-    included: [
-      "Treatment + flights included",
-      "Dedicated care coordinator",
-      "Premium accommodation & transfers",
-      "Full concierge & VIP experience",
-      "Post-treatment recovery suite & follow-ups",
-    ],
-    excluded: [],
-    highlight: false,
-  },
-];
+import { useLanguage } from "@/i18n/LanguageContext";
 
 const PricingSection = () => {
+  const { t } = useLanguage();
+
+  const plans = [
+    {
+      name: t("price_essential"),
+      price: t("price_free"),
+      badge: t("price_mostPopular"),
+      included: [t("price_essential_1"), t("price_essential_2")],
+      excluded: [t("price_dedicatedCoordinator"), t("price_premiumAccommodation"), t("price_conciergeVIP")],
+      highlight: true,
+    },
+    {
+      name: t("price_comfort"),
+      priceLabel: t("price_startingAt"),
+      price: "$1,200",
+      included: [t("price_comfort_1"), t("price_comfort_2"), t("price_comfort_3"), t("price_comfort_4")],
+      excluded: [t("price_dedicatedCoordinator")],
+      highlight: false,
+    },
+    {
+      name: t("price_premium"),
+      priceLabel: t("price_startingAt"),
+      price: "$1,500",
+      included: [t("price_premium_1"), t("price_premium_2"), t("price_premium_3"), t("price_premium_4"), t("price_premium_5")],
+      excluded: [],
+      highlight: false,
+    },
+  ];
+
   return (
     <section className="py-24 md:py-32">
       <div className="container px-6 text-center">
-        <h2 className="font-display text-3xl md:text-4xl italic mb-3">Flexible Plans for Every Patient</h2>
-        <p className="text-muted-foreground mb-12">Pick the level of support that fits your needs and budget.</p>
+        <h2 className="font-display text-3xl md:text-4xl italic mb-3">{t("price_title")}</h2>
+        <p className="text-muted-foreground mb-12">{t("price_subtitle")}</p>
 
         <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {plans.map((plan) => (
@@ -84,15 +76,13 @@ const PricingSection = () => {
                     : "border border-border hover:bg-muted"
                 }`}
               >
-                Book Now
+                {t("price_bookNow")}
               </button>
             </div>
           ))}
         </div>
 
-        <p className="text-xs text-muted-foreground mt-8">
-          Note: Hospital treatment fees are billed directly at the hospital's standard rates — no markups from HealthPort.
-        </p>
+        <p className="text-xs text-muted-foreground mt-8">{t("price_note")}</p>
       </div>
     </section>
   );

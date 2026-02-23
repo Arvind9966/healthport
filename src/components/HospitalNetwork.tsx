@@ -1,8 +1,11 @@
+import { useLanguage } from "@/i18n/LanguageContext";
+
 const hospitals = [
   "Fortis", "Medanta", "Narayana", "HCG", "Apollo", "BM Birla", "Manipal", "Max", "Hinduja",
 ];
 
 const HospitalNetwork = () => {
+  const { t } = useLanguage();
   const row1 = hospitals.slice(0, 5);
   const row2 = hospitals.slice(5);
 
@@ -10,7 +13,7 @@ const HospitalNetwork = () => {
     <section className="py-24 md:py-32 bg-section-light" id="hospitals">
       <div className="container px-6">
         <h2 className="font-display text-3xl md:text-4xl text-center mb-12">
-          Our Trusted Hospital Network
+          {t("hospital_title")}
         </h2>
       </div>
       <div className="overflow-hidden">

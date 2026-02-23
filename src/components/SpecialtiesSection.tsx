@@ -5,6 +5,7 @@ import {
   Sparkles, Search, Leaf, HeartPulse, Droplets, Pill,
   ScanEye, HandHeart, Thermometer, Waves
 } from "lucide-react";
+import { useLanguage } from "@/i18n/LanguageContext";
 
 type Specialty = {
   name: string;
@@ -48,27 +49,26 @@ const wellness: Specialty[] = [
   { name: "Neuro-Wellness", icon: Brain, rating: "92%", price: "$500" },
 ];
 
-const tabs = [
-  { key: "medical", label: "Medical", data: medical },
-  { key: "aesthetic", label: "Aesthetic", data: aesthetic },
-  { key: "wellness", label: "Wellness", data: wellness },
-] as const;
-
 const SpecialtiesSection = () => {
+  const { t } = useLanguage();
+
+  const tabs = [
+    { key: "medical", label: t("spec_tabMedical"), data: medical },
+    { key: "aesthetic", label: t("spec_tabAesthetic"), data: aesthetic },
+    { key: "wellness", label: t("spec_tabWellness"), data: wellness },
+  ] as const;
+
   const [activeTab, setActiveTab] = useState<string>("medical");
-  const currentTab = tabs.find((t) => t.key === activeTab)!;
+  const currentTab = tabs.find((tab) => tab.key === activeTab)!;
 
   return (
     <section className="py-24 md:py-32" id="specialties">
       <div className="container px-6">
         <h2 className="font-display text-3xl md:text-4xl text-center mb-3">
-          Browse by <span className="text-primary">Specialty</span>
+          {t("spec_title")}<span className="text-primary">{t("spec_titleHighlight")}</span>
         </h2>
-        <p className="text-muted-foreground text-center mb-10">
-          Find the right treatment across 30+ medical disciplines worldwide.
-        </p>
+        <p className="text-muted-foreground text-center mb-10">{t("spec_subtitle")}</p>
 
-        {/* Tabs */}
         <div className="flex justify-center gap-8 mb-10 border-b border-border">
           {tabs.map((tab) => (
             <button
@@ -85,12 +85,10 @@ const SpecialtiesSection = () => {
           ))}
         </div>
 
-        {/* Section Title */}
         <h3 className="text-2xl font-semibold mb-8 text-foreground">
-          {currentTab.label} <span className="text-primary">Treatments</span>
+          {currentTab.label} <span className="text-primary">{t("spec_treatments")}</span>
         </h3>
 
-        {/* Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-5">
           {currentTab.data.map(({ name, icon: Icon, rating, price }) => (
             <div
@@ -101,9 +99,9 @@ const SpecialtiesSection = () => {
                 <Icon className="w-6 h-6 text-primary" />
               </div>
               <span className="font-medium text-foreground text-sm mb-3 min-h-[2.5rem]">{name}</span>
-              <p className="text-primary text-xs font-medium">{rating} Rated</p>
-              <p className="text-primary text-xs mb-3">Value for Money</p>
-              <p className="text-xs text-muted-foreground">Packages Starting from</p>
+              <p className="text-primary text-xs font-medium">{rating} {t("spec_rated")}</p>
+              <p className="text-primary text-xs mb-3">{t("spec_valueForMoney")}</p>
+              <p className="text-xs text-muted-foreground">{t("spec_packagesFrom")}</p>
               <p className="text-primary text-sm font-semibold">{price}</p>
             </div>
           ))}
