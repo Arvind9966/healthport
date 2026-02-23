@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import logo from "@/assets/logo.png";
 
 const navLinks = ["Hospitals", "Specialties", "How It Works", "Testimonials", "Contact Us"];
 
@@ -7,14 +8,9 @@ const Navbar = () => {
   return (
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
       <div className="container flex items-center justify-between h-16 px-6">
-        <div className="flex items-center gap-2">
-          <div className="w-9 h-9 rounded-full bg-primary flex items-center justify-center">
-            <span className="text-primary-foreground font-bold text-sm">H</span>
-          </div>
-          <span className="text-lg font-semibold">
-            Health<span className="text-primary">Port</span>
-          </span>
-        </div>
+        <Link to="/" className="flex items-center">
+          <img src={logo} alt="HealthPort" className="h-10 w-auto" />
+        </Link>
 
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
