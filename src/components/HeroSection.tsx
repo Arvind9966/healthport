@@ -15,7 +15,7 @@ const HeroSection = () => {
         >
           <source src={heroBgVideo} type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-background/40" />
+        <div className="absolute inset-0 bg-black/60" />
       </div>
 
       <div className="container px-6 text-center relative z-10">
