@@ -10,7 +10,7 @@ const features = [
 
 const FeaturesSection = () => {
   return (
-    <section className="py-24 md:py-32 bg-section-light">
+    <section className="py-24 md:py-32 blue-gradient-box">
       <div className="container px-6 text-center">
         <h2 className="font-display text-3xl md:text-4xl mb-3">
           Everything You Need, <span className="text-primary">One Platform</span>
@@ -21,7 +21,7 @@ const FeaturesSection = () => {
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
           {features.map(({ icon: Icon, title, desc }) => (
-            <div key={title} className="bg-card border border-border rounded-2xl p-6 flex flex-col items-center gap-3">
+            <div key={title} className="bg-white/70 border border-primary/10 rounded-2xl p-6 flex flex-col items-center gap-3 backdrop-blur-sm">
               <div className="w-14 h-14 rounded-full bg-secondary flex items-center justify-center">
                 <Icon className="w-6 h-6 text-primary" />
               </div>

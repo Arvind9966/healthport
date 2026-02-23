@@ -16,14 +16,14 @@ const HospitalNetwork = () => {
       <div className="overflow-hidden">
         <div className="flex gap-4 mb-4 animate-scroll-left">
           {[...row1, ...row1].map((h, i) => (
-            <div key={i} className="flex-shrink-0 bg-card rounded-xl px-8 py-5 shadow-sm border border-border min-w-[180px] text-center">
+            <div key={i} className="flex-shrink-0 blue-gradient-box rounded-xl px-8 py-5 shadow-sm border border-primary/10 min-w-[180px] text-center">
               <span className="text-sm font-medium text-foreground">{h}</span>
             </div>
           ))}
         </div>
         <div className="flex gap-4 animate-scroll-left" style={{ animationDirection: "reverse" }}>
           {[...row2, ...row2].map((h, i) => (
-            <div key={i} className="flex-shrink-0 bg-card rounded-xl px-8 py-5 shadow-sm border border-border min-w-[180px] text-center">
+            <div key={i} className="flex-shrink-0 blue-gradient-box rounded-xl px-8 py-5 shadow-sm border border-primary/10 min-w-[180px] text-center">
               <span className="text-sm font-medium text-foreground">{h}</span>
             </div>
           ))}
