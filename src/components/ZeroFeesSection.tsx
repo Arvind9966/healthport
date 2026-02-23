@@ -4,7 +4,7 @@ const ZeroFeesSection = () => {
   return (
     <section className="py-24 md:py-32">
       <div className="container px-6">
-        <div className="bg-section-light rounded-3xl p-12 md:p-16 text-center">
+        <div className="blue-gradient-box rounded-3xl p-12 md:p-16 text-center border border-primary/10">
           <h2 className="font-display text-3xl md:text-4xl mb-4">
             Zero Service Fees. <span className="text-primary">Always.</span>
           </h2>

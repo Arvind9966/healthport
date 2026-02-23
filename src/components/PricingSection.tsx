@@ -49,8 +49,8 @@ const PricingSection = () => {
           {plans.map((plan) => (
             <div
               key={plan.name}
-              className={`relative bg-card border rounded-2xl p-8 text-left flex flex-col ${
-                plan.highlight ? "border-primary shadow-lg" : "border-border"
+              className={`relative blue-gradient-box border rounded-2xl p-8 text-left flex flex-col ${
+                plan.highlight ? "border-primary shadow-lg" : "border-primary/10"
               }`}
             >
               {plan.badge && (

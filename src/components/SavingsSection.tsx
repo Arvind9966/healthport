@@ -4,7 +4,7 @@ const SavingsSection = () => {
   return (
     <section className="py-24 md:py-32">
       <div className="container px-6">
-        <div className="bg-section-light rounded-3xl p-10 md:p-16 flex flex-col md:flex-row items-center gap-12">
+        <div className="blue-gradient-box rounded-3xl p-10 md:p-16 flex flex-col md:flex-row items-center gap-12 border border-primary/10">
           <div className="flex-1">
             <p className="text-primary font-semibold tracking-widest text-sm mb-4 uppercase">Save Up To</p>
             <h2 className="font-display text-6xl md:text-7xl text-primary mb-2">70%</h2>

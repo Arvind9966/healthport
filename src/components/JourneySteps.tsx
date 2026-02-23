@@ -52,7 +52,7 @@ const JourneySteps = () => {
         <div className="max-w-2xl mx-auto space-y-10">
           {steps.map(({ num, icon: Icon, title, tag, desc }) => (
             <div key={num} className="flex items-start gap-5">
-              <div className="w-14 h-14 rounded-full bg-secondary flex items-center justify-center flex-shrink-0">
+              <div className="w-14 h-14 rounded-full blue-gradient-box border border-primary/20 flex items-center justify-center flex-shrink-0">
                 <span className="text-primary font-display text-sm font-semibold">{num}</span>
               </div>
               <div className="flex items-start gap-3 pt-1">

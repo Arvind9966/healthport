@@ -95,7 +95,7 @@ const SpecialtiesSection = () => {
           {currentTab.data.map(({ name, icon: Icon, rating, price }) => (
             <div
               key={name}
-              className="bg-card border border-border rounded-2xl p-5 flex flex-col items-center text-center hover:shadow-md transition-shadow cursor-pointer"
+              className="blue-gradient-box border border-primary/10 rounded-2xl p-5 flex flex-col items-center text-center hover:shadow-md transition-shadow cursor-pointer"
             >
               <div className="w-14 h-14 rounded-full bg-secondary flex items-center justify-center mb-3">
                 <Icon className="w-6 h-6 text-primary" />
