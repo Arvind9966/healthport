@@ -1,8 +1,29 @@
 import { ArrowRight, ExternalLink } from "lucide-react";
+import Antigravity from "./Antigravity";
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* 3D Particle Background */}
+      <div className="absolute inset-0 z-0">
+        <Antigravity
+          count={300}
+          magnetRadius={6}
+          ringRadius={7}
+          waveSpeed={0.4}
+          waveAmplitude={1}
+          particleSize={1.5}
+          lerpSpeed={0.05}
+          color="#5227FF"
+          autoAnimate
+          particleVariance={1}
+          rotationSpeed={0}
+          depthFactor={1}
+          pulseSpeed={3}
+          particleShape="capsule"
+          fieldStrength={10}
+        />
+      </div>
 
       <div className="container px-6 text-center relative z-10">
         <p className="text-muted-foreground text-lg mb-6">
