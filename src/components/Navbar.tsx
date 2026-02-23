@@ -9,7 +9,7 @@ const Navbar = () => {
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
       <div className="container flex items-center justify-between h-16 px-6">
         <Link to="/" className="flex items-center">
-          <img src={logo} alt="HealthPort" className="h-10 w-auto" />
+          <img src={logo} alt="HealthPort" className="h-28 w-auto -my-8" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
