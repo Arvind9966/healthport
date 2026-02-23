@@ -1,12 +1,10 @@
 const hospitals = [
-  "Apollo", "BM Birla", "Manipal", "Max Healthcare", "Hinduja", "AIIMS",
-  "Kokilaben", "Columbia Asia", "Wockhardt", "Global Hospital", "Aster CMI",
-  "Sahyadri", "Shalby", "Ruby Hall",
+  "Fortis", "Medanta", "Narayana", "HCG", "Apollo", "BM Birla", "Manipal", "Max", "Hinduja",
 ];
 
 const HospitalNetwork = () => {
-  const row1 = hospitals.slice(0, 7);
-  const row2 = hospitals.slice(7);
+  const row1 = hospitals.slice(0, 5);
+  const row2 = hospitals.slice(5);
 
   return (
     <section className="py-24 md:py-32 bg-section-light" id="hospitals">
