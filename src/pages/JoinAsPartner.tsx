@@ -106,14 +106,17 @@ const JoinAsPartner = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <p className="text-sm text-muted-foreground mb-2">Home &gt; Join as a Partner</p>
-              <h1 className="font-display text-3xl md:text-4xl lg:text-5xl leading-tight text-foreground mt-8 mb-6">
-                Partner with HealthPort and Unlock New Opportunities!
+              <h1 className="font-display text-3xl md:text-4xl lg:text-5xl leading-tight text-foreground mt-8 mb-4">
+                Partner with HealthPort
               </h1>
-              <p className="text-muted-foreground mb-2">
-                Collaborate with HealthPort to elevate your health travel business.
+              <h2 className="text-xl md:text-2xl text-primary font-medium mb-6">
+                Grow Your Medical Referral Business with a Trusted India Network
+              </h2>
+              <p className="text-muted-foreground mb-3">
+                At HealthPort, we collaborate with medical tourism agents, visa consultants, and healthcare facilitators who want reliable hospital access, transparent pricing, and structured coordination.
               </p>
               <p className="text-muted-foreground mb-8">
-                Together, we can create seamless patient experiences, drive growth, and expand your reach globally.
+                Together, we can create seamless patient experiences globally.
               </p>
               <div className="flex flex-wrap gap-4">
                 <button
