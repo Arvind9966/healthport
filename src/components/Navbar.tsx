@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const navLinks = ["Hospitals", "Specialties", "How It Works", "Testimonials", "Contact Us"];
 
@@ -25,6 +26,12 @@ const Navbar = () => {
               {link}
             </a>
           ))}
+          <Link
+            to="/join-as-partner"
+            className="text-sm text-primary font-medium hover:opacity-80 transition-opacity"
+          >
+            Join as a Partner
+          </Link>
         </nav>
 
         <button className="bg-primary text-primary-foreground px-5 py-2 rounded-full text-sm font-medium hover:opacity-90 transition-opacity">
