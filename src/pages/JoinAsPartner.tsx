@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { ArrowRight, Mail, Globe, Monitor, Megaphone, ClipboardCheck, GraduationCap, HeadphonesIcon, BarChart3 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import partnerHeroImg from "@/assets/partner-hero.jpg";
+import partnerFeaturesImg from "@/assets/partner-features.jpg";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -125,8 +127,8 @@ const JoinAsPartner = () => {
                 </button>
               </div>
             </div>
-            <div className="bg-muted rounded-2xl h-72 md:h-96 flex items-center justify-center">
-              <div className="text-muted-foreground text-6xl">🤝</div>
+            <div className="rounded-2xl h-72 md:h-96 overflow-hidden">
+              <img src={partnerHeroImg} alt="Healthcare partnership" className="w-full h-full object-cover rounded-2xl" />
             </div>
           </div>
         </div>
@@ -153,8 +155,8 @@ const JoinAsPartner = () => {
                 </div>
               ))}
             </div>
-            <div className="bg-muted rounded-2xl h-80 md:h-[28rem] flex items-center justify-center">
-              <div className="text-muted-foreground text-6xl">👨‍⚕️</div>
+            <div className="rounded-2xl h-80 md:h-[28rem] overflow-hidden">
+              <img src={partnerFeaturesImg} alt="Doctor consulting with patient" className="w-full h-full object-cover rounded-2xl" />
             </div>
           </div>
         </div>
