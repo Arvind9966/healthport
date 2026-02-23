@@ -1,28 +1,21 @@
 import { ArrowRight, ExternalLink } from "lucide-react";
-import Antigravity from "./Antigravity";
+import heroBgVideo from "@/assets/hero-bg-video.mp4";
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* 3D Particle Background */}
+      {/* Background Video */}
       <div className="absolute inset-0 z-0">
-        <Antigravity
-          count={300}
-          magnetRadius={30}
-          ringRadius={7}
-          waveSpeed={0.4}
-          waveAmplitude={1}
-          particleSize={1.5}
-          lerpSpeed={0.08}
-          color="#1E9BF0"
-          autoAnimate
-          particleVariance={1}
-          rotationSpeed={0}
-          depthFactor={1}
-          pulseSpeed={3}
-          particleShape="capsule"
-          fieldStrength={10}
-        />
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover"
+        >
+          <source src={heroBgVideo} type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-background/80" />
       </div>
 
       <div className="container px-6 text-center relative z-10">
