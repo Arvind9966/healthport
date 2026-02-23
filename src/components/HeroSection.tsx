@@ -8,13 +8,13 @@ const HeroSection = () => {
       <div className="absolute inset-0 z-0">
         <Antigravity
           count={300}
-          magnetRadius={6}
+          magnetRadius={30}
           ringRadius={7}
           waveSpeed={0.4}
           waveAmplitude={1}
           particleSize={1.5}
-          lerpSpeed={0.05}
-          color="#5227FF"
+          lerpSpeed={0.08}
+          color="#1E9BF0"
           autoAnimate
           particleVariance={1}
           rotationSpeed={0}
