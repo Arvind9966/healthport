@@ -7,9 +7,9 @@ const navLinks = ["Hospitals", "Specialties", "How It Works", "Testimonials", "C
 const Navbar = () => {
   return (
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
-      <div className="container flex items-center justify-between h-16 px-6">
-        <Link to="/" className="flex items-center">
-          <img src={logo} alt="HealthPort" className="h-28 w-auto -my-8" />
+      <div className="container flex items-center justify-between h-20 px-6">
+        <Link to="/" className="flex items-center overflow-hidden">
+          <img src={logo} alt="HealthPort" className="h-44 w-auto -my-16 object-contain" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
