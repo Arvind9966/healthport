@@ -3,21 +3,6 @@ import { ArrowRight, ExternalLink } from "lucide-react";
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Decorative dots */}
-      <div className="absolute inset-0 pointer-events-none">
-        {Array.from({ length: 40 }).map((_, i) => (
-          <div
-            key={i}
-            className="absolute rounded-full bg-primary/15"
-            style={{
-              width: `${4 + Math.random() * 10}px`,
-              height: `${4 + Math.random() * 10}px`,
-              top: `${10 + Math.random() * 60}%`,
-              left: `${20 + Math.random() * 60}%`,
-            }}
-          />
-        ))}
-      </div>
 
       <div className="container px-6 text-center relative z-10">
         <p className="text-muted-foreground text-lg mb-6">
