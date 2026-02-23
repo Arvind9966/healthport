@@ -9,6 +9,7 @@ import JourneySteps from "@/components/JourneySteps";
 import ZeroFeesSection from "@/components/ZeroFeesSection";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Index = () => {
   return (
@@ -24,6 +25,7 @@ const Index = () => {
       <ZeroFeesSection />
       <ContactForm />
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 };
