@@ -62,19 +62,19 @@ const SpecialtiesSection = () => {
   const currentTab = tabs.find((tab) => tab.key === activeTab)!;
 
   return (
-    <section className="py-24 md:py-32" id="specialties">
-      <div className="container px-6">
-        <h2 className="font-display text-3xl md:text-4xl text-center mb-3">
+    <section className="py-16 sm:py-24 md:py-32" id="specialties">
+      <div className="container px-4 sm:px-6">
+        <h2 className="font-display text-2xl sm:text-3xl md:text-4xl text-center mb-3">
           {t("spec_title")}<span className="text-primary">{t("spec_titleHighlight")}</span>
         </h2>
-        <p className="text-muted-foreground text-center mb-10">{t("spec_subtitle")}</p>
+        <p className="text-muted-foreground text-sm sm:text-base text-center mb-8 sm:mb-10">{t("spec_subtitle")}</p>
 
-        <div className="flex justify-center gap-8 mb-10 border-b border-border">
+        <div className="flex justify-center gap-4 sm:gap-8 mb-8 sm:mb-10 border-b border-border overflow-x-auto">
           {tabs.map((tab) => (
             <button
               key={tab.key}
               onClick={() => setActiveTab(tab.key)}
-              className={`pb-3 text-sm font-medium transition-colors ${
+              className={`pb-3 text-xs sm:text-sm font-medium transition-colors whitespace-nowrap ${
                 activeTab === tab.key
                   ? "text-primary border-b-2 border-primary"
                   : "text-muted-foreground hover:text-foreground"
@@ -85,24 +85,24 @@ const SpecialtiesSection = () => {
           ))}
         </div>
 
-        <h3 className="text-2xl font-semibold mb-8 text-foreground">
+        <h3 className="text-xl sm:text-2xl font-semibold mb-6 sm:mb-8 text-foreground">
           {currentTab.label} <span className="text-primary">{t("spec_treatments")}</span>
         </h3>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-5">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-5">
           {currentTab.data.map(({ name, icon: Icon, rating, price }) => (
             <div
               key={name}
-              className="blue-gradient-box border border-primary/10 rounded-2xl p-5 flex flex-col items-center text-center hover:shadow-md transition-shadow cursor-pointer"
+              className="blue-gradient-box border border-primary/10 rounded-2xl p-3 sm:p-5 flex flex-col items-center text-center hover:shadow-md transition-shadow cursor-pointer"
             >
-              <div className="w-14 h-14 rounded-full bg-secondary flex items-center justify-center mb-3">
-                <Icon className="w-6 h-6 text-primary" />
+              <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-full bg-secondary flex items-center justify-center mb-2 sm:mb-3">
+                <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
               </div>
-              <span className="font-medium text-foreground text-sm mb-3 min-h-[2.5rem]">{name}</span>
-              <p className="text-primary text-xs font-medium">{rating} {t("spec_rated")}</p>
-              <p className="text-primary text-xs mb-3">{t("spec_valueForMoney")}</p>
-              <p className="text-xs text-muted-foreground">{t("spec_packagesFrom")}</p>
-              <p className="text-primary text-sm font-semibold">{price}</p>
+              <span className="font-medium text-foreground text-xs sm:text-sm mb-2 sm:mb-3 min-h-[2rem] sm:min-h-[2.5rem]">{name}</span>
+              <p className="text-primary text-[10px] sm:text-xs font-medium">{rating} {t("spec_rated")}</p>
+              <p className="text-primary text-[10px] sm:text-xs mb-2 sm:mb-3">{t("spec_valueForMoney")}</p>
+              <p className="text-[10px] sm:text-xs text-muted-foreground">{t("spec_packagesFrom")}</p>
+              <p className="text-primary text-xs sm:text-sm font-semibold">{price}</p>
             </div>
           ))}
         </div>
