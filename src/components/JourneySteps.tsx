@@ -13,25 +13,25 @@ const JourneySteps = () => {
   ];
 
   return (
-    <section className="py-24 md:py-32" id="how-it-works">
-      <div className="container px-6">
-        <h2 className="font-display text-3xl md:text-4xl italic text-center mb-3">
+    <section className="py-16 sm:py-24 md:py-32" id="how-it-works">
+      <div className="container px-4 sm:px-6">
+        <h2 className="font-display text-2xl sm:text-3xl md:text-4xl italic text-center mb-3">
           {t("journey_title")}
         </h2>
-        <p className="text-muted-foreground text-center mb-14">{t("journey_subtitle")}</p>
+        <p className="text-muted-foreground text-sm sm:text-base text-center mb-10 sm:mb-14">{t("journey_subtitle")}</p>
 
-        <div className="max-w-2xl mx-auto space-y-10">
+        <div className="max-w-2xl mx-auto space-y-6 sm:space-y-10">
           {steps.map(({ num, icon: Icon, title, tag, desc }) => (
-            <div key={num} className="flex items-start gap-5">
-              <div className="w-14 h-14 rounded-full blue-gradient-box border border-primary/20 flex items-center justify-center flex-shrink-0">
-                <span className="text-primary font-display text-sm font-semibold">{num}</span>
+            <div key={num} className="flex items-start gap-3 sm:gap-5">
+              <div className="w-10 h-10 sm:w-14 sm:h-14 rounded-full blue-gradient-box border border-primary/20 flex items-center justify-center flex-shrink-0">
+                <span className="text-primary font-display text-xs sm:text-sm font-semibold">{num}</span>
               </div>
-              <div className="flex items-start gap-3 pt-1">
-                <Icon className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
+              <div className="flex items-start gap-2 sm:gap-3 pt-0.5 sm:pt-1">
+                <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-primary mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="font-display text-lg">{title}</h3>
-                  <p className="text-primary text-sm font-medium">{tag}</p>
-                  <p className="text-muted-foreground text-sm mt-1">{desc}</p>
+                  <h3 className="font-display text-base sm:text-lg">{title}</h3>
+                  <p className="text-primary text-xs sm:text-sm font-medium">{tag}</p>
+                  <p className="text-muted-foreground text-xs sm:text-sm mt-1">{desc}</p>
                 </div>
               </div>
             </div>
