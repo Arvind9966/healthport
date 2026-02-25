@@ -19,18 +19,18 @@ const Navbar = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50 shadow-sm">
-      <div className="container flex items-center justify-between h-20 px-6">
+    <header className="sticky top-0 z-50 bg-background/90 backdrop-blur-xl border-b border-border/40 shadow-sm">
+      <div className="container flex items-center justify-between h-16 sm:h-20 px-5 sm:px-6">
         <Link to="/" className="flex items-center overflow-hidden">
-          <img src={logo} alt="HealthPort" className="h-44 w-auto -mb-20 -mt-12 object-contain" />
+          <img src={logo} alt="HealthPort" className="h-36 sm:h-44 w-auto -mb-16 sm:-mb-20 -mt-10 sm:-mt-12 object-contain" />
         </Link>
 
-        <nav className="hidden md:flex items-center gap-7">
+        <nav className="hidden md:flex items-center gap-6 lg:gap-7">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors duration-200"
+              className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full"
             >
               {link.label}
             </a>
@@ -44,23 +44,22 @@ const Navbar = () => {
           <LanguageSelector />
         </nav>
 
-
         {/* Mobile menu */}
         <Sheet open={open} onOpenChange={setOpen}>
           <SheetTrigger asChild className="md:hidden">
-            <button className="p-2 rounded-lg hover:bg-muted transition-colors">
-              <MoreVertical className="w-6 h-6 text-foreground" />
+            <button className="p-2 rounded-xl hover:bg-muted transition-colors">
+              <MoreVertical className="w-5 h-5 text-foreground" />
             </button>
           </SheetTrigger>
           <SheetContent side="right" className="w-[280px] pt-12">
             <SheetTitle className="sr-only">Menu</SheetTitle>
-            <nav className="flex flex-col gap-4">
+            <nav className="flex flex-col gap-1">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="text-base font-medium text-foreground/70 hover:text-primary transition-colors duration-200 py-2"
+                  className="text-base font-medium text-foreground/70 hover:text-primary hover:bg-primary/5 transition-all duration-200 py-3 px-4 rounded-xl"
                 >
                   {link.label}
                 </a>
@@ -68,11 +67,11 @@ const Navbar = () => {
               <Link
                 to="/join-as-partner"
                 onClick={() => setOpen(false)}
-                className="text-base font-semibold text-primary hover:text-primary/80 transition-colors duration-200 py-2"
+                className="text-base font-semibold text-primary hover:bg-primary/5 transition-all duration-200 py-3 px-4 rounded-xl"
               >
                 {t("nav_joinPartner")}
               </Link>
-              <div className="py-2">
+              <div className="py-3 px-4">
                 <LanguageSelector />
               </div>
             </nav>
