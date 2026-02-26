@@ -192,6 +192,7 @@ const hospitalsData: HospitalDetail[] = [
 
 const HospitalDetailCard = ({ hospital, index }: { hospital: HospitalDetail; index: number }) => (
   <motion.div
+    id={hospital.name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}
     initial={{ opacity: 0, y: 30 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}

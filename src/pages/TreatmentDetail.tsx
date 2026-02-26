@@ -131,6 +131,7 @@ const TreatmentDetail = () => {
 
             {/* Sub-Treatments Grid */}
             <motion.section
+              id="sub-treatments"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
@@ -186,7 +187,7 @@ const TreatmentDetail = () => {
             </motion.section>
 
             {/* Conditions */}
-            <motion.section initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+            <motion.section id="conditions" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
               <div className="rounded-2xl border border-primary/10 p-6 sm:p-8 bg-background">
                 <div className="flex items-center gap-3 mb-5">
                   <div className="w-1 h-7 rounded-full bg-primary" />
