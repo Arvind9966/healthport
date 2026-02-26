@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
@@ -23,6 +24,10 @@ const fadeUp = {
 
 const TreatmentDetail = () => {
   const { slug } = useParams<{ slug: string }>();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [slug]);
   const treatment = getTreatmentBySlug(slug || "");
 
   if (!treatment) {
