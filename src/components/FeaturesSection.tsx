@@ -14,21 +14,21 @@ const FeaturesSection = () => {
   ];
 
   return (
-    <section className="py-16 sm:py-20 md:py-28 blue-gradient-box">
-      <div className="container px-5 sm:px-6 text-center">
+    <section className="py-12 xs:py-16 sm:py-20 md:py-28 blue-gradient-box">
+      <div className="container px-4 xs:px-5 sm:px-6 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl mb-3">
+          <h2 className="font-display text-xl xs:text-2xl sm:text-3xl md:text-4xl mb-3">
             {t("feat_title")}<span className="gradient-text">{t("feat_titleHighlight")}</span>
           </h2>
-          <p className="text-muted-foreground text-sm sm:text-base mb-10 sm:mb-14 max-w-xl mx-auto">{t("feat_subtitle")}</p>
+          <p className="text-muted-foreground text-xs xs:text-sm sm:text-base mb-8 xs:mb-10 sm:mb-14 max-w-xl mx-auto">{t("feat_subtitle")}</p>
         </motion.div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 md:gap-5">
+        <div className="grid grid-cols-2 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 xs:gap-3 sm:gap-4 md:gap-5">
           {features.map(({ icon: Icon, title, desc }, i) => (
             <motion.div
               key={title}
@@ -36,13 +36,15 @@ const FeaturesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.08 }}
-              className="bg-card/90 border border-primary/10 rounded-2xl p-4 sm:p-6 flex flex-col items-center gap-2.5 sm:gap-3 backdrop-blur-sm hover-lift group"
+              className={`bg-card/90 border border-primary/10 rounded-xl xs:rounded-2xl p-3 xs:p-4 sm:p-6 flex flex-col items-center gap-2 xs:gap-2.5 sm:gap-3 backdrop-blur-sm hover-lift group ${
+                i === features.length - 1 ? "col-span-2 sm:col-span-1" : ""
+              }`}
             >
-              <div className="w-11 h-11 sm:w-14 sm:h-14 rounded-2xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
+              <div className="w-9 h-9 xs:w-11 xs:h-11 sm:w-14 sm:h-14 rounded-xl xs:rounded-2xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                <Icon className="w-4 h-4 xs:w-5 xs:h-5 sm:w-6 sm:h-6 text-primary" />
               </div>
-              <h3 className="font-semibold text-xs sm:text-sm text-foreground leading-tight">{title}</h3>
-              <p className="text-[10px] sm:text-xs text-muted-foreground leading-relaxed">{desc}</p>
+              <h3 className="font-semibold text-[11px] xs:text-xs sm:text-sm text-foreground leading-tight">{title}</h3>
+              <p className="text-[9px] xs:text-[10px] sm:text-xs text-muted-foreground leading-relaxed">{desc}</p>
             </motion.div>
           ))}
         </div>

@@ -63,8 +63,8 @@ const SpecialtiesSection = () => {
   const currentTab = tabs.find((tab) => tab.key === activeTab)!;
 
   return (
-    <section className="py-16 sm:py-20 md:py-28" id="specialties">
-      <div className="container px-5 sm:px-6">
+    <section className="py-12 xs:py-16 sm:py-20 md:py-28" id="specialties">
+      <div className="container px-4 xs:px-5 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -72,18 +72,18 @@ const SpecialtiesSection = () => {
           transition={{ duration: 0.5 }}
           className="text-center"
         >
-          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl mb-3">
+          <h2 className="font-display text-xl xs:text-2xl sm:text-3xl md:text-4xl mb-3">
             {t("spec_title")}<span className="gradient-text">{t("spec_titleHighlight")}</span>
           </h2>
-          <p className="text-muted-foreground text-sm sm:text-base mb-8 sm:mb-10">{t("spec_subtitle")}</p>
+          <p className="text-muted-foreground text-xs xs:text-sm sm:text-base mb-6 xs:mb-8 sm:mb-10">{t("spec_subtitle")}</p>
         </motion.div>
 
-        <div className="flex justify-center gap-1 sm:gap-2 mb-8 sm:mb-10 overflow-x-auto pb-1">
+        <div className="flex justify-center gap-1 xs:gap-1.5 sm:gap-2 mb-6 xs:mb-8 sm:mb-10 overflow-x-auto pb-1">
           {tabs.map((tab) => (
             <button
               key={tab.key}
               onClick={() => setActiveTab(tab.key)}
-              className={`px-4 sm:px-6 py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all whitespace-nowrap ${
+              className={`px-3 xs:px-4 sm:px-6 py-2 xs:py-2.5 rounded-full text-[11px] xs:text-xs sm:text-sm font-medium transition-all whitespace-nowrap ${
                 activeTab === tab.key
                   ? "bg-primary text-primary-foreground shadow-md shadow-primary/20"
                   : "bg-muted text-muted-foreground hover:bg-muted/80"
@@ -94,7 +94,7 @@ const SpecialtiesSection = () => {
           ))}
         </div>
 
-        <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-6 sm:mb-8 text-foreground text-center">
+        <h3 className="text-base xs:text-lg sm:text-xl md:text-2xl font-semibold mb-4 xs:mb-6 sm:mb-8 text-foreground text-center">
           {currentTab.label} <span className="text-primary">{t("spec_treatments")}</span>
         </h3>
 
@@ -105,21 +105,21 @@ const SpecialtiesSection = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.3 }}
-            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 sm:gap-4"
+            className="grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-2 xs:gap-3 sm:gap-4"
           >
             {currentTab.data.map(({ name, icon: Icon, rating, price }) => (
               <div
                 key={name}
-                className="blue-gradient-box border border-primary/10 rounded-2xl p-3.5 sm:p-5 flex flex-col items-center text-center hover-lift cursor-pointer group"
+                className="blue-gradient-box border border-primary/10 rounded-xl xs:rounded-2xl p-2.5 xs:p-3.5 sm:p-5 flex flex-col items-center text-center hover-lift cursor-pointer group"
               >
-                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-2.5 sm:mb-3 group-hover:bg-primary/20 transition-colors">
-                  <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
+                <div className="w-8 h-8 xs:w-10 xs:h-10 sm:w-12 sm:h-12 rounded-lg xs:rounded-xl bg-primary/10 flex items-center justify-center mb-2 xs:mb-2.5 sm:mb-3 group-hover:bg-primary/20 transition-colors">
+                  <Icon className="w-4 h-4 xs:w-5 xs:h-5 sm:w-6 sm:h-6 text-primary" />
                 </div>
-                <span className="font-medium text-foreground text-[11px] sm:text-xs leading-tight mb-2 sm:mb-3 min-h-[2rem] sm:min-h-[2.5rem]">{name}</span>
-                <p className="text-primary text-[10px] sm:text-xs font-medium">{rating} {t("spec_rated")}</p>
-                <p className="text-primary/70 text-[9px] sm:text-[10px] mb-2">{t("spec_valueForMoney")}</p>
-                <p className="text-[10px] sm:text-xs text-muted-foreground">{t("spec_packagesFrom")}</p>
-                <p className="text-primary text-xs sm:text-sm font-bold">{price}</p>
+                <span className="font-medium text-foreground text-[10px] xs:text-[11px] sm:text-xs leading-tight mb-1.5 xs:mb-2 sm:mb-3 min-h-[1.5rem] xs:min-h-[2rem] sm:min-h-[2.5rem]">{name}</span>
+                <p className="text-primary text-[9px] xs:text-[10px] sm:text-xs font-medium">{rating} {t("spec_rated")}</p>
+                <p className="text-primary/70 text-[8px] xs:text-[9px] sm:text-[10px] mb-1 xs:mb-2">{t("spec_valueForMoney")}</p>
+                <p className="text-[9px] xs:text-[10px] sm:text-xs text-muted-foreground">{t("spec_packagesFrom")}</p>
+                <p className="text-primary text-[10px] xs:text-xs sm:text-sm font-bold">{price}</p>
               </div>
             ))}
           </motion.div>
