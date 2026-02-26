@@ -11,7 +11,7 @@ const HospitalNetwork = () => {
   const row2 = hospitals.slice(5);
 
   return (
-    <section className="py-12 xs:py-16 sm:py-20 md:py-28" id="hospitals">
+    <section className="py-8 xs:py-10 sm:py-12 md:py-16" id="hospitals">
       <div className="container px-4 xs:px-5 sm:px-6">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
