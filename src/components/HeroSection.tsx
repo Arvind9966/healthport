@@ -38,15 +38,14 @@ const HeroSection = () => {
   }, [currentIndex]);
 
   const nextIndex = (currentIndex + 1) % heroVideos.length;
+  const prevIndex = (currentIndex - 1 + heroVideos.length) % heroVideos.length;
 
   return (
     <section className="relative min-h-[85vh] xs:min-h-[90vh] sm:min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         {heroVideos.map((src, i) => {
-          // Only render current and next video to avoid loading all 4 at once
           const isActive = i === currentIndex;
-          const isNext = i === nextIndex;
-          if (!isActive && !isNext) return null;
+          const shouldLoad = isActive || i === nextIndex || i === prevIndex;
 
           return (
             <video
@@ -56,9 +55,12 @@ const HeroSection = () => {
               loop
               muted
               playsInline
-              preload={isActive ? "auto" : "metadata"}
-              className="absolute inset-0 w-full h-full object-cover scale-105 transition-opacity duration-700 ease-in-out"
-              style={{ opacity: isActive ? 1 : 0 }}
+              preload={shouldLoad ? "auto" : "none"}
+              className="absolute inset-0 w-full h-full object-cover scale-105"
+              style={{
+                opacity: isActive ? 1 : 0,
+                transition: "opacity 1.2s ease-in-out",
+              }}
             >
               <source src={src} type="video/mp4" />
             </video>
