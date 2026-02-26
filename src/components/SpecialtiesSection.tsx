@@ -115,10 +115,12 @@ const SpecialtiesSection = () => {
             transition={{ duration: 0.3 }}
             className="grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-2 xs:gap-3 sm:gap-4"
           >
-            {visibleData.map(({ name, icon: Icon, rating, price }) => (
-              <div
+            {visibleData.map(({ name, icon: Icon, rating, price }, index) => (
+              <motion.div
                 key={name}
-                className="blue-gradient-box border border-primary/10 rounded-xl xs:rounded-2xl p-2.5 xs:p-3.5 sm:p-5 flex flex-col items-center text-center hover-lift cursor-pointer group"
+                whileHover={{ scale: 1.08, y: -6 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                className="blue-gradient-box border border-primary/10 rounded-xl xs:rounded-2xl p-2.5 xs:p-3.5 sm:p-5 flex flex-col items-center text-center cursor-pointer group hover:shadow-lg hover:shadow-primary/10 hover:border-primary/20"
               >
                 <div className="w-8 h-8 xs:w-10 xs:h-10 sm:w-12 sm:h-12 rounded-lg xs:rounded-xl bg-primary/10 flex items-center justify-center mb-2 xs:mb-2.5 sm:mb-3 group-hover:bg-primary/20 transition-colors">
                   <Icon className="w-4 h-4 xs:w-5 xs:h-5 sm:w-6 sm:h-6 text-primary" />
@@ -128,7 +130,7 @@ const SpecialtiesSection = () => {
                 <p className="text-primary/70 text-[8px] xs:text-[9px] sm:text-[10px] mb-1 xs:mb-2">{t("spec_valueForMoney")}</p>
                 <p className="text-[9px] xs:text-[10px] sm:text-xs text-muted-foreground">{t("spec_packagesFrom")}</p>
                 <p className="text-primary text-[10px] xs:text-xs sm:text-sm font-bold">{price}</p>
-              </div>
+              </motion.div>
             ))}
           </motion.div>
         </AnimatePresence>
