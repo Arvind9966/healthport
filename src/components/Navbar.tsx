@@ -11,7 +11,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   const navLinks = [
-    { label: t("nav_hospitals"), href: "#hospitals" },
+    { label: t("nav_hospitals"), href: "/hospitals", isRoute: true },
     { label: t("nav_specialties"), href: "#specialties" },
     { label: t("nav_howItWorks"), href: "#how-it-works" },
     { label: t("nav_contactUs"), href: "#contact-us" },
@@ -25,15 +25,25 @@ const Navbar = () => {
         </Link>
 
         <nav className="hidden lg:flex items-center gap-4 xl:gap-7">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-sm xl:text-base font-medium text-foreground/70 hover:text-primary transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full whitespace-nowrap"
-            >
-              {link.label}
-            </a>
-          ))}
+          {navLinks.map((link) =>
+            link.isRoute ? (
+              <Link
+                key={link.href}
+                to={link.href}
+                className="text-sm xl:text-base font-medium text-foreground/70 hover:text-primary transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full whitespace-nowrap"
+              >
+                {link.label}
+              </Link>
+            ) : (
+              <a
+                key={link.href}
+                href={link.href}
+                className="text-sm xl:text-base font-medium text-foreground/70 hover:text-primary transition-colors duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full whitespace-nowrap"
+              >
+                {link.label}
+              </a>
+            )
+          )}
           <Link
             to="/join-as-partner"
             className="text-sm font-semibold text-primary hover:text-primary/80 transition-colors duration-200"
@@ -53,16 +63,27 @@ const Navbar = () => {
           <SheetContent side="right" className="w-[300px] pt-14 px-5 bg-background/95 backdrop-blur-xl rounded-l-3xl border-l border-border/30 shadow-2xl">
             <SheetTitle className="sr-only">Menu</SheetTitle>
             <nav className="flex flex-col gap-2 mt-2">
-              {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setOpen(false)}
-                  className="text-base font-medium text-foreground/70 hover:text-primary hover:bg-primary/5 transition-all duration-200 py-3.5 px-5 rounded-2xl border border-transparent hover:border-primary/10 hover:shadow-sm"
-                >
-                  {link.label}
-                </a>
-              ))}
+              {navLinks.map((link) =>
+                link.isRoute ? (
+                  <Link
+                    key={link.href}
+                    to={link.href}
+                    onClick={() => setOpen(false)}
+                    className="text-base font-medium text-foreground/70 hover:text-primary hover:bg-primary/5 transition-all duration-200 py-3.5 px-5 rounded-2xl border border-transparent hover:border-primary/10 hover:shadow-sm"
+                  >
+                    {link.label}
+                  </Link>
+                ) : (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setOpen(false)}
+                    className="text-base font-medium text-foreground/70 hover:text-primary hover:bg-primary/5 transition-all duration-200 py-3.5 px-5 rounded-2xl border border-transparent hover:border-primary/10 hover:shadow-sm"
+                  >
+                    {link.label}
+                  </a>
+                )
+              )}
               <div className="my-2 h-px bg-border/40 mx-3" />
               <Link
                 to="/join-as-partner"
