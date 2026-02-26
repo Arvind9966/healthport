@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { ChevronDown, ChevronUp } from "lucide-react";
 import {
   Scissors, Heart, Ear, Eye, Brain, Baby, Bone, Smile,
   Stethoscope, Microscope, Syringe, Activity, Shield,
@@ -50,8 +51,11 @@ const wellness: Specialty[] = [
   { name: "Neuro-Wellness", icon: Brain, rating: "92%", price: "$500" },
 ];
 
+const INITIAL_VISIBLE = 8;
+
 const SpecialtiesSection = () => {
   const { t } = useLanguage();
+  const [showAll, setShowAll] = useState(false);
 
   const tabs = [
     { key: "medical", label: t("spec_tabMedical"), data: medical },
@@ -61,6 +65,10 @@ const SpecialtiesSection = () => {
 
   const [activeTab, setActiveTab] = useState<string>("medical");
   const currentTab = tabs.find((tab) => tab.key === activeTab)!;
+  const visibleData = showAll || currentTab.data.length <= INITIAL_VISIBLE
+    ? currentTab.data
+    : currentTab.data.slice(0, INITIAL_VISIBLE);
+  const hasMore = currentTab.data.length > INITIAL_VISIBLE;
 
   return (
     <section className="py-4 xs:py-5 sm:py-6 md:py-8 scroll-mt-24" id="specialties">
@@ -82,7 +90,7 @@ const SpecialtiesSection = () => {
           {tabs.map((tab) => (
             <button
               key={tab.key}
-              onClick={() => setActiveTab(tab.key)}
+              onClick={() => { setActiveTab(tab.key); setShowAll(false); }}
               className={`px-3 xs:px-4 sm:px-6 py-2 xs:py-2.5 rounded-full text-[11px] xs:text-xs sm:text-sm font-medium transition-all whitespace-nowrap ${
                 activeTab === tab.key
                   ? "bg-primary text-primary-foreground shadow-md shadow-primary/20"
@@ -107,7 +115,7 @@ const SpecialtiesSection = () => {
             transition={{ duration: 0.3 }}
             className="grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-2 xs:gap-3 sm:gap-4"
           >
-            {currentTab.data.map(({ name, icon: Icon, rating, price }) => (
+            {visibleData.map(({ name, icon: Icon, rating, price }) => (
               <div
                 key={name}
                 className="blue-gradient-box border border-primary/10 rounded-xl xs:rounded-2xl p-2.5 xs:p-3.5 sm:p-5 flex flex-col items-center text-center hover-lift cursor-pointer group"
@@ -124,6 +132,18 @@ const SpecialtiesSection = () => {
             ))}
           </motion.div>
         </AnimatePresence>
+
+        {hasMore && (
+          <div className="flex justify-center mt-4 xs:mt-6 sm:mt-8">
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-muted text-muted-foreground hover:bg-primary/10 hover:text-primary text-xs sm:text-sm font-medium transition-all"
+            >
+              {showAll ? "Show Less" : `See All (${currentTab.data.length})`}
+              {showAll ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );
