@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useMemo } from "react";
 import { Search, X } from "lucide-react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { treatments } from "@/data/treatments";
 
 type SearchResult = {
@@ -10,32 +10,40 @@ type SearchResult = {
   link: string;
 };
 
+function slugify(name: string) {
+  return name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+}
+
 const GlobalSearch = () => {
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+  const navigate = useNavigate();
 
-  // Build search index once
   const searchIndex = useMemo(() => {
     const items: SearchResult[] = [];
     const hospitalSet = new Set<string>();
 
     treatments.forEach((t) => {
+      // Treatment → its page
       items.push({ type: "treatment", label: t.name, link: `/treatment/${t.slug}` });
 
+      // Sub-treatments → treatment page scrolled to sub-treatments section
       t.subTreatments.forEach((sub) => {
-        items.push({ type: "sub-treatment", label: sub.name, detail: t.name, link: `/treatment/${t.slug}` });
+        items.push({ type: "sub-treatment", label: sub.name, detail: t.name, link: `/treatment/${t.slug}#sub-treatments` });
       });
 
+      // Conditions → treatment page scrolled to conditions section
       t.conditions.forEach((c) => {
-        items.push({ type: "condition", label: c, detail: t.name, link: `/treatment/${t.slug}` });
+        items.push({ type: "condition", label: c, detail: t.name, link: `/treatment/${t.slug}#conditions` });
       });
 
+      // Hospitals → hospitals page scrolled to that hospital
       t.topHospitals.forEach((h) => {
         if (!hospitalSet.has(h)) {
           hospitalSet.add(h);
-          items.push({ type: "hospital", label: h, link: "/hospitals" });
+          items.push({ type: "hospital", label: h, link: `/hospitals#${slugify(h)}` });
         }
       });
     });
@@ -55,7 +63,6 @@ const GlobalSearch = () => {
     if (open) inputRef.current?.focus();
   }, [open]);
 
-  // Close on click outside
   useEffect(() => {
     const handler = (e: MouseEvent) => {
       if (containerRef.current && !containerRef.current.contains(e.target as Node)) {
@@ -67,7 +74,6 @@ const GlobalSearch = () => {
     return () => document.removeEventListener("mousedown", handler);
   }, [open]);
 
-  // Close on Escape
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
       if (e.key === "Escape") { setOpen(false); setQuery(""); }
@@ -75,6 +81,24 @@ const GlobalSearch = () => {
     if (open) document.addEventListener("keydown", handler);
     return () => document.removeEventListener("keydown", handler);
   }, [open]);
+
+  const handleSelect = (result: SearchResult) => {
+    setOpen(false);
+    setQuery("");
+
+    const [path, hash] = result.link.split("#");
+    navigate(path);
+
+    // Scroll to hash element after navigation
+    if (hash) {
+      setTimeout(() => {
+        const el = document.getElementById(hash);
+        if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 300);
+    } else {
+      setTimeout(() => window.scrollTo({ top: 0, behavior: "smooth" }), 100);
+    }
+  };
 
   const typeLabel: Record<string, string> = {
     treatment: "Treatment",
@@ -103,7 +127,6 @@ const GlobalSearch = () => {
       {open && (
         <div className="fixed inset-0 z-[100] bg-black/40 backdrop-blur-sm flex items-start justify-center pt-[15vh]">
           <div className="w-[90vw] max-w-lg bg-background rounded-2xl border border-border shadow-2xl overflow-hidden animate-scale-in">
-            {/* Input */}
             <div className="flex items-center gap-3 px-4 py-3 border-b border-border/50">
               <Search className="w-5 h-5 text-muted-foreground flex-shrink-0" />
               <input
@@ -118,26 +141,24 @@ const GlobalSearch = () => {
               </button>
             </div>
 
-            {/* Results */}
             <div className="max-h-[50vh] overflow-y-auto">
               {query.trim() && results.length === 0 && (
                 <p className="text-sm text-muted-foreground text-center py-8">No results found</p>
               )}
               {results.map((r, i) => (
-                <Link
+                <button
                   key={`${r.type}-${r.label}-${i}`}
-                  to={r.link}
-                  onClick={() => { setOpen(false); setQuery(""); }}
-                  className="flex items-center gap-3 px-4 py-3 hover:bg-muted/50 transition-colors border-b border-border/20 last:border-0"
+                  onClick={() => handleSelect(r)}
+                  className="w-full flex items-center gap-3 px-4 py-3 hover:bg-muted/50 transition-colors border-b border-border/20 last:border-0 text-left"
                 >
-                  <span className={`text-[10px] font-semibold px-2 py-0.5 rounded-full ${typeColor[r.type]}`}>
+                  <span className={`text-[10px] font-semibold px-2 py-0.5 rounded-full whitespace-nowrap ${typeColor[r.type]}`}>
                     {typeLabel[r.type]}
                   </span>
                   <div className="flex-1 min-w-0">
                     <p className="text-sm font-medium text-foreground truncate">{r.label}</p>
                     {r.detail && <p className="text-xs text-muted-foreground truncate">{r.detail}</p>}
                   </div>
-                </Link>
+                </button>
               ))}
               {!query.trim() && (
                 <p className="text-xs text-muted-foreground text-center py-6">Start typing to search…</p>
