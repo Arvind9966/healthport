@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { MapPin, Star, Bed } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 type HospitalData = {
@@ -145,6 +146,12 @@ const HospitalCard = ({ hospital }: { hospital: HospitalData }) => (
         </span>
       ))}
     </div>
+    <Link
+      to="/hospitals"
+      className="mt-3 xs:mt-4 inline-flex items-center justify-center text-xs xs:text-sm font-semibold text-primary-foreground bg-primary hover:bg-primary/90 px-4 py-2 rounded-xl transition-colors duration-200"
+    >
+      View in Detail
+    </Link>
   </div>
 );
 
