@@ -63,7 +63,7 @@ const SpecialtiesSection = () => {
   const currentTab = tabs.find((tab) => tab.key === activeTab)!;
 
   return (
-    <section className="py-4 xs:py-5 sm:py-6 md:py-8" id="specialties">
+    <section className="py-4 xs:py-5 sm:py-6 md:py-8 scroll-mt-24" id="specialties">
       <div className="container px-4 xs:px-5 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

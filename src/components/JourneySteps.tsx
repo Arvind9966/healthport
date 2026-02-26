@@ -14,7 +14,7 @@ const JourneySteps = () => {
   ];
 
   return (
-    <section className="py-4 xs:py-5 sm:py-6 md:py-8 blue-gradient-box" id="how-it-works">
+    <section className="py-4 xs:py-5 sm:py-6 md:py-8 blue-gradient-box scroll-mt-24" id="how-it-works">
       <div className="container px-4 xs:px-5 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

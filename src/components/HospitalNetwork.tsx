@@ -9,7 +9,7 @@ const HospitalNetwork = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="py-4 xs:py-5 sm:py-6 md:py-8" id="hospitals">
+    <section className="py-4 xs:py-5 sm:py-6 md:py-8 scroll-mt-24" id="hospitals">
       <div className="container px-4 xs:px-5 sm:px-6">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
