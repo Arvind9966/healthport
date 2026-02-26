@@ -131,4 +131,39 @@
     content: '';
     @apply absolute bottom-0 left-1/2 -translate-x-1/2 w-24 h-0.5 bg-primary/20 rounded-full;
   }
+
+  @keyframes glitter {
+    0%, 100% {
+      opacity: 0;
+      transform: scale(0) rotate(0deg);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1) rotate(180deg);
+    }
+  }
+
+  .icon-glitter {
+    position: relative;
+    overflow: visible;
+  }
+  .icon-glitter::before,
+  .icon-glitter::after {
+    content: '✦';
+    position: absolute;
+    font-size: 10px;
+    color: hsl(207 90% 54%);
+    opacity: 0;
+    pointer-events: none;
+  }
+  .icon-glitter::before {
+    top: 2px;
+    right: 2px;
+    animation: glitter 2s ease-in-out infinite;
+  }
+  .icon-glitter::after {
+    bottom: 4px;
+    left: 2px;
+    animation: glitter 2s ease-in-out infinite 1s;
+  }
 }
