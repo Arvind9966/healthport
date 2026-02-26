@@ -122,8 +122,8 @@ const SpecialtiesSection = () => {
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 className="blue-gradient-box border border-primary/10 rounded-xl xs:rounded-2xl p-2.5 xs:p-3.5 sm:p-5 flex flex-col items-center text-center cursor-pointer group hover:shadow-lg hover:shadow-primary/10 hover:border-primary/20"
               >
-                <div className="w-8 h-8 xs:w-10 xs:h-10 sm:w-12 sm:h-12 rounded-lg xs:rounded-xl bg-primary/10 flex items-center justify-center mb-2 xs:mb-2.5 sm:mb-3 group-hover:bg-primary/20 transition-colors">
-                  <Icon className="w-4 h-4 xs:w-5 xs:h-5 sm:w-6 sm:h-6 text-primary" />
+                <div className="icon-glitter w-14 h-14 xs:w-16 xs:h-16 sm:w-20 sm:h-20 rounded-2xl bg-primary/5 border border-primary/10 flex items-center justify-center mb-2.5 xs:mb-3 sm:mb-4 group-hover:bg-primary/10 group-hover:border-primary/20 transition-all duration-300">
+                  <Icon className="w-7 h-7 xs:w-8 xs:h-8 sm:w-10 sm:h-10 text-primary" strokeWidth={1.5} />
                 </div>
                 <span className="font-medium text-foreground text-[10px] xs:text-[11px] sm:text-xs leading-tight mb-1.5 xs:mb-2 sm:mb-3 min-h-[1.5rem] xs:min-h-[2rem] sm:min-h-[2.5rem]">{name}</span>
                 <p className="text-primary text-[9px] xs:text-[10px] sm:text-xs font-medium">{rating} {t("spec_rated")}</p>
