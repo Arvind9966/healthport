@@ -14,7 +14,6 @@ const Navbar = () => {
     { label: t("nav_hospitals"), href: "#hospitals" },
     { label: t("nav_specialties"), href: "#specialties" },
     { label: t("nav_howItWorks"), href: "#how-it-works" },
-    { label: t("nav_testimonials"), href: "#testimonials" },
     { label: t("nav_contactUs"), href: "#contact-us" },
   ];
 
