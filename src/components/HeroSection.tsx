@@ -14,7 +14,6 @@ const HeroSection = () => {
   const { t } = useLanguage();
   const badges = [t("hero_badge1"), t("hero_badge2"), t("hero_badge3"), t("hero_badge4")];
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [loadedCount, setLoadedCount] = useState(0);
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 
   const advanceClip = useCallback(() => {
@@ -22,10 +21,9 @@ const HeroSection = () => {
   }, []);
 
   useEffect(() => {
-    if (loadedCount < heroVideos.length) return;
     const interval = setInterval(advanceClip, CLIP_DURATION);
     return () => clearInterval(interval);
-  }, [advanceClip, loadedCount]);
+  }, [advanceClip]);
 
   // Play/pause videos based on current index
   useEffect(() => {
@@ -40,9 +38,6 @@ const HeroSection = () => {
     });
   }, [currentIndex]);
 
-  const handleVideoLoaded = () => {
-    setLoadedCount((prev) => prev + 1);
-  };
 
   return (
     <section className="relative min-h-[85vh] xs:min-h-[90vh] sm:min-h-screen flex items-center justify-center overflow-hidden">
@@ -57,7 +52,7 @@ const HeroSection = () => {
             muted
             playsInline
             preload="auto"
-            onCanPlayThrough={handleVideoLoaded}
+            
             className="absolute inset-0 w-full h-full object-cover scale-105 transition-opacity duration-700 ease-in-out"
             style={{ opacity: i === currentIndex ? 1 : 0 }}
           >
