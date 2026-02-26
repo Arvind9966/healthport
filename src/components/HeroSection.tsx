@@ -109,12 +109,12 @@ const HeroSection = () => {
           transition={{ duration: 0.6, delay: 0.45 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-2.5 xs:gap-3 sm:gap-4"
         >
-          <button className="w-full sm:w-auto bg-primary text-primary-foreground px-6 xs:px-7 sm:px-8 py-3 xs:py-3.5 sm:py-4 rounded-full text-sm xs:text-base font-medium flex items-center justify-center gap-2 hover:opacity-90 transition-all shadow-lg shadow-primary/30 hover:shadow-xl hover:shadow-primary/40 hover:scale-[1.02] active:scale-[0.98]">
+          <a href="#specialties" className="w-full sm:w-auto bg-primary text-primary-foreground px-6 xs:px-7 sm:px-8 py-3 xs:py-3.5 sm:py-4 rounded-full text-sm xs:text-base font-medium flex items-center justify-center gap-2 hover:opacity-90 transition-all shadow-lg shadow-primary/30 hover:shadow-xl hover:shadow-primary/40 hover:scale-[1.02] active:scale-[0.98]">
             {t("hero_cta1")} <ArrowRight className="w-4 h-4" />
-          </button>
-          <button className="w-full sm:w-auto border border-white/20 text-white px-6 xs:px-7 sm:px-8 py-3 xs:py-3.5 sm:py-4 rounded-full text-sm xs:text-base font-medium flex items-center justify-center gap-2 hover:bg-white/10 transition-all backdrop-blur-md hover:border-white/40">
+          </a>
+          <a href="#contact-us" className="w-full sm:w-auto border border-white/20 text-white px-6 xs:px-7 sm:px-8 py-3 xs:py-3.5 sm:py-4 rounded-full text-sm xs:text-base font-medium flex items-center justify-center gap-2 hover:bg-white/10 transition-all backdrop-blur-md hover:border-white/40">
             {t("hero_cta2")} <ExternalLink className="w-4 h-4" />
-          </button>
+          </a>
         </motion.div>
       </div>
 
