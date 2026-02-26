@@ -6,7 +6,7 @@ const ContactForm = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="py-8 xs:py-10 sm:py-12 md:py-16" id="contact-us">
+    <section className="py-4 xs:py-5 sm:py-6 md:py-8" id="contact-us">
       <div className="container px-4 xs:px-5 sm:px-6 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
