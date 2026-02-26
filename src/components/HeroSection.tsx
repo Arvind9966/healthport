@@ -25,7 +25,6 @@ const HeroSection = () => {
     return () => clearInterval(interval);
   }, [advanceClip]);
 
-  // Play/pause videos based on current index
   useEffect(() => {
     videoRefs.current.forEach((video, i) => {
       if (!video) return;
@@ -38,27 +37,33 @@ const HeroSection = () => {
     });
   }, [currentIndex]);
 
+  const nextIndex = (currentIndex + 1) % heroVideos.length;
 
   return (
     <section className="relative min-h-[85vh] xs:min-h-[90vh] sm:min-h-screen flex items-center justify-center overflow-hidden">
-      {/* All videos rendered simultaneously, opacity controls visibility */}
       <div className="absolute inset-0 z-0">
-        {heroVideos.map((src, i) => (
-          <video
-            key={i}
-            ref={(el) => { videoRefs.current[i] = el; }}
-            autoPlay={i === 0}
-            loop
-            muted
-            playsInline
-            preload="auto"
-            
-            className="absolute inset-0 w-full h-full object-cover scale-105 transition-opacity duration-700 ease-in-out"
-            style={{ opacity: i === currentIndex ? 1 : 0 }}
-          >
-            <source src={src} type="video/mp4" />
-          </video>
-        ))}
+        {heroVideos.map((src, i) => {
+          // Only render current and next video to avoid loading all 4 at once
+          const isActive = i === currentIndex;
+          const isNext = i === nextIndex;
+          if (!isActive && !isNext) return null;
+
+          return (
+            <video
+              key={i}
+              ref={(el) => { videoRefs.current[i] = el; }}
+              autoPlay={isActive}
+              loop
+              muted
+              playsInline
+              preload={isActive ? "auto" : "metadata"}
+              className="absolute inset-0 w-full h-full object-cover scale-105 transition-opacity duration-700 ease-in-out"
+              style={{ opacity: isActive ? 1 : 0 }}
+            >
+              <source src={src} type="video/mp4" />
+            </video>
+          );
+        })}
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70 z-10" />
       </div>
 
