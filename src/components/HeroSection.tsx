@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import { ArrowRight, ExternalLink } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import heroClip1 from "@/assets/hero-clip-1.mp4";
 import heroClip2 from "@/assets/hero-clip-2.mp4";
 import heroClip3 from "@/assets/hero-clip-3.mp4";
@@ -8,12 +8,13 @@ import heroClip4 from "@/assets/hero-clip-4.mp4";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const heroVideos = [heroClip1, heroClip2, heroClip3, heroClip4];
-const CLIP_DURATION = 3000; // 3 seconds per clip
+const CLIP_DURATION = 3000;
 
 const HeroSection = () => {
   const { t } = useLanguage();
   const badges = [t("hero_badge1"), t("hero_badge2"), t("hero_badge3"), t("hero_badge4")];
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [loadedCount, setLoadedCount] = useState(0);
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 
   const advanceClip = useCallback(() => {
@@ -21,44 +22,48 @@ const HeroSection = () => {
   }, []);
 
   useEffect(() => {
+    if (loadedCount < heroVideos.length) return;
     const interval = setInterval(advanceClip, CLIP_DURATION);
     return () => clearInterval(interval);
-  }, [advanceClip]);
+  }, [advanceClip, loadedCount]);
 
-  // Ensure current video plays
+  // Play/pause videos based on current index
   useEffect(() => {
-    const video = videoRefs.current[currentIndex];
-    if (video) {
-      video.currentTime = 0;
-      video.play().catch(() => {});
-    }
+    videoRefs.current.forEach((video, i) => {
+      if (!video) return;
+      if (i === currentIndex) {
+        video.currentTime = 0;
+        video.play().catch(() => {});
+      } else {
+        video.pause();
+      }
+    });
   }, [currentIndex]);
+
+  const handleVideoLoaded = () => {
+    setLoadedCount((prev) => prev + 1);
+  };
 
   return (
     <section className="relative min-h-[85vh] xs:min-h-[90vh] sm:min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Rotating video backgrounds */}
+      {/* All videos rendered simultaneously, opacity controls visibility */}
       <div className="absolute inset-0 z-0">
-        <AnimatePresence mode="sync">
-          <motion.div
-            key={currentIndex}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.8, ease: "easeInOut" }}
-            className="absolute inset-0"
+        {heroVideos.map((src, i) => (
+          <video
+            key={i}
+            ref={(el) => { videoRefs.current[i] = el; }}
+            autoPlay={i === 0}
+            loop
+            muted
+            playsInline
+            preload="auto"
+            onCanPlayThrough={handleVideoLoaded}
+            className="absolute inset-0 w-full h-full object-cover scale-105 transition-opacity duration-700 ease-in-out"
+            style={{ opacity: i === currentIndex ? 1 : 0 }}
           >
-            <video
-              ref={(el) => { videoRefs.current[currentIndex] = el; }}
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="w-full h-full object-cover scale-105"
-            >
-              <source src={heroVideos[currentIndex]} type="video/mp4" />
-            </video>
-          </motion.div>
-        </AnimatePresence>
+            <source src={src} type="video/mp4" />
+          </video>
+        ))}
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70 z-10" />
       </div>
 
