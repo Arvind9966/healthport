@@ -50,27 +50,28 @@ const Navbar = () => {
               <Menu className="w-5 h-5 text-foreground transition-transform duration-200" />
             </button>
           </SheetTrigger>
-          <SheetContent side="right" className="w-[280px] pt-12">
+          <SheetContent side="right" className="w-[300px] pt-14 px-5 bg-background/95 backdrop-blur-xl rounded-l-3xl border-l border-border/30 shadow-2xl">
             <SheetTitle className="sr-only">Menu</SheetTitle>
-            <nav className="flex flex-col gap-1">
+            <nav className="flex flex-col gap-2 mt-2">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="text-base font-medium text-foreground/70 hover:text-primary hover:bg-primary/5 transition-all duration-200 py-3 px-4 rounded-xl"
+                  className="text-base font-medium text-foreground/70 hover:text-primary hover:bg-primary/5 transition-all duration-200 py-3.5 px-5 rounded-2xl border border-transparent hover:border-primary/10 hover:shadow-sm"
                 >
                   {link.label}
                 </a>
               ))}
+              <div className="my-2 h-px bg-border/40 mx-3" />
               <Link
                 to="/join-as-partner"
                 onClick={() => setOpen(false)}
-                className="text-base font-semibold text-primary hover:bg-primary/5 transition-all duration-200 py-3 px-4 rounded-xl"
+                className="text-base font-semibold text-primary hover:bg-primary/5 transition-all duration-200 py-3.5 px-5 rounded-2xl border border-primary/15 hover:border-primary/30 hover:shadow-sm"
               >
                 {t("nav_joinPartner")}
               </Link>
-              <div className="py-3 px-4">
+              <div className="py-3 px-5 mt-1">
                 <LanguageSelector />
               </div>
             </nav>
