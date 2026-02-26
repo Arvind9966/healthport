@@ -1,0 +1,31 @@
+declare module 'healthicons-react/outline' {
+  import { ComponentType, SVGProps } from 'react';
+  type HealthIcon = ComponentType<SVGProps<SVGSVGElement>>;
+  export const Stomach: HealthIcon;
+  export const Cardiology: HealthIcon;
+  export const EarsNoseAndThroat: HealthIcon;
+  export const GeneralSurgery: HealthIcon;
+  export const Stethoscope: HealthIcon;
+  export const Hematology: HealthIcon;
+  export const Hepatology: HealthIcon;
+  export const Microscope: HealthIcon;
+  export const FemaleReproductiveSystem: HealthIcon;
+  export const Kidneys: HealthIcon;
+  export const Neurology: HealthIcon;
+  export const NeuroSurgery: HealthIcon;
+  export const Oncology: HealthIcon;
+  export const Opthalmology: HealthIcon;
+  export const Orthopaedics: HealthIcon;
+  export const Pediatrics: HealthIcon;
+  export const Spine: HealthIcon;
+  export const HeartOrgan: HealthIcon;
+  export const Urology: HealthIcon;
+  export const VascularSurgery: HealthIcon;
+  export const Tooth: HealthIcon;
+  export const Gynecology: HealthIcon;
+  export const Odontology: HealthIcon;
+  export const Body: HealthIcon;
+  export const Lungs: HealthIcon;
+  export const MentalHealth: HealthIcon;
+  export const ExerciseYoga: HealthIcon;
+}

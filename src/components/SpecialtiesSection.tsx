@@ -2,11 +2,13 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import {
-  Scissors, Heart, Ear, Eye, Brain, Baby, Bone, Smile,
-  Stethoscope, Microscope, Syringe, Activity, Shield,
-  Sparkles, Search, Leaf, HeartPulse, Droplets, Pill,
-  ScanEye, HandHeart, Thermometer, Waves
-} from "lucide-react";
+  Stomach, Cardiology, EarsNoseAndThroat, GeneralSurgery, Stethoscope,
+  Hematology, Hepatology, Microscope, FemaleReproductiveSystem,
+  Kidneys, Neurology, NeuroSurgery, Oncology, Opthalmology,
+  Orthopaedics, Pediatrics, Spine, HeartOrgan, Urology,
+  VascularSurgery, Tooth, Body, MentalHealth, ExerciseYoga
+} from "healthicons-react/outline";
+import { Scissors, Sparkles, Leaf } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 type Specialty = {
@@ -17,38 +19,38 @@ type Specialty = {
 };
 
 const medical: Specialty[] = [
-  { name: "Bariatric Surgery", icon: Activity, rating: "93%", price: "$1500" },
-  { name: "Cardiac Sciences", icon: HeartPulse, rating: "90%", price: "$500" },
-  { name: "ENT", icon: Ear, rating: "91%", price: "$18000" },
-  { name: "General & Laparoscopic Surgery", icon: Shield, rating: "95%", price: "$1800" },
+  { name: "Bariatric Surgery", icon: Stomach, rating: "93%", price: "$1500" },
+  { name: "Cardiac Sciences", icon: Cardiology, rating: "90%", price: "$500" },
+  { name: "ENT", icon: EarsNoseAndThroat, rating: "91%", price: "$18000" },
+  { name: "General & Laparoscopic Surgery", icon: GeneralSurgery, rating: "95%", price: "$1800" },
   { name: "General Medicine", icon: Stethoscope, rating: "93%", price: "$500" },
-  { name: "Haematology & BMT", icon: Droplets, rating: "92%", price: "$30000" },
-  { name: "Hepatology", icon: Pill, rating: "92%", price: "$11000" },
+  { name: "Haematology & BMT", icon: Hematology, rating: "92%", price: "$30000" },
+  { name: "Hepatology", icon: Hepatology, rating: "92%", price: "$11000" },
   { name: "Infectious Disease", icon: Microscope, rating: "92%", price: "$2000" },
-  { name: "Infertility", icon: Baby, rating: "90%", price: "$3000" },
-  { name: "Nephrology & Urology", icon: Syringe, rating: "91%", price: "$3000" },
-  { name: "Neuro Sciences", icon: Brain, rating: "95%", price: "$5500" },
-  { name: "Neurology", icon: Brain, rating: "93%", price: "$2500" },
-  { name: "Obstetrics & Gynecology", icon: Baby, rating: "92%", price: "$2500" },
-  { name: "Oncology", icon: Search, rating: "95%", price: "$600" },
-  { name: "Ophthalmology", icon: ScanEye, rating: "95%", price: "$800" },
-  { name: "Orthopedics", icon: Bone, rating: "92%", price: "$2200" },
-  { name: "Paediatrics & Neonatology", icon: HandHeart, rating: "90%", price: "$500" },
-  { name: "Spine Surgery", icon: Bone, rating: "95%", price: "$4000" },
-  { name: "Transplant", icon: Heart, rating: "90%", price: "$6000" },
-  { name: "Urology", icon: Thermometer, rating: "93%", price: "$3000" },
-  { name: "Vascular Surgery", icon: Waves, rating: "90%", price: "$3000" },
+  { name: "Infertility", icon: FemaleReproductiveSystem, rating: "90%", price: "$3000" },
+  { name: "Nephrology & Urology", icon: Kidneys, rating: "91%", price: "$3000" },
+  { name: "Neuro Sciences", icon: NeuroSurgery, rating: "95%", price: "$5500" },
+  { name: "Neurology", icon: Neurology, rating: "93%", price: "$2500" },
+  { name: "Obstetrics & Gynecology", icon: FemaleReproductiveSystem, rating: "92%", price: "$2500" },
+  { name: "Oncology", icon: Oncology, rating: "95%", price: "$600" },
+  { name: "Ophthalmology", icon: Opthalmology, rating: "95%", price: "$800" },
+  { name: "Orthopedics", icon: Orthopaedics, rating: "92%", price: "$2200" },
+  { name: "Paediatrics & Neonatology", icon: Pediatrics, rating: "90%", price: "$500" },
+  { name: "Spine Surgery", icon: Spine, rating: "95%", price: "$4000" },
+  { name: "Transplant", icon: HeartOrgan, rating: "90%", price: "$6000" },
+  { name: "Urology", icon: Urology, rating: "93%", price: "$3000" },
+  { name: "Vascular Surgery", icon: VascularSurgery, rating: "90%", price: "$3000" },
 ];
 
 const aesthetic: Specialty[] = [
-  { name: "Dental", icon: Smile, rating: "91%", price: "$100" },
+  { name: "Dental", icon: Tooth, rating: "91%", price: "$100" },
   { name: "Hair Transplant", icon: Scissors, rating: "91%", price: "$2000" },
   { name: "Plastic, Aesthetic & Reconstructive Surgery", icon: Sparkles, rating: "91%", price: "$200" },
 ];
 
 const wellness: Specialty[] = [
   { name: "Health and Wellness", icon: Leaf, rating: "90%", price: "$200" },
-  { name: "Neuro-Wellness", icon: Brain, rating: "92%", price: "$500" },
+  { name: "Neuro-Wellness", icon: MentalHealth, rating: "92%", price: "$500" },
 ];
 
 const INITIAL_VISIBLE = 12;
@@ -115,7 +117,7 @@ const SpecialtiesSection = () => {
             transition={{ duration: 0.3 }}
             className="grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-2 xs:gap-3 sm:gap-4"
           >
-            {visibleData.map(({ name, icon: Icon, rating, price }, index) => (
+            {visibleData.map(({ name, icon: Icon, rating, price }) => (
               <motion.div
                 key={name}
                 whileHover={{ scale: 1.08, y: -6 }}
@@ -123,7 +125,7 @@ const SpecialtiesSection = () => {
                 className="blue-gradient-box border border-primary/10 rounded-xl xs:rounded-2xl p-2.5 xs:p-3.5 sm:p-5 flex flex-col items-center text-center cursor-pointer group hover:shadow-lg hover:shadow-primary/10 hover:border-primary/20"
               >
                 <div className="icon-glitter w-14 h-14 xs:w-16 xs:h-16 sm:w-20 sm:h-20 rounded-2xl bg-primary/5 border border-primary/10 flex items-center justify-center mb-2.5 xs:mb-3 sm:mb-4 group-hover:bg-primary/10 group-hover:border-primary/20 transition-all duration-300">
-                  <Icon className="w-7 h-7 xs:w-8 xs:h-8 sm:w-10 sm:h-10 text-primary" strokeWidth={1.5} />
+                  <Icon className="w-8 h-8 xs:w-9 xs:h-9 sm:w-11 sm:h-11 text-primary" />
                 </div>
                 <span className="font-medium text-foreground text-[10px] xs:text-[11px] sm:text-xs leading-tight mb-1.5 xs:mb-2 sm:mb-3 min-h-[1.5rem] xs:min-h-[2rem] sm:min-h-[2.5rem]">{name}</span>
                 <p className="text-primary text-[9px] xs:text-[10px] sm:text-xs font-medium">{rating} {t("spec_rated")}</p>
