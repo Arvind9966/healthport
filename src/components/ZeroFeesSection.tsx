@@ -6,7 +6,7 @@ const ZeroFeesSection = () => {
   const { t } = useLanguage();
 
   return (
-    <section className="py-4 xs:py-5 sm:py-6 md:py-8">
+    <section className="py-2 xs:py-3 sm:py-4 md:py-5">
       <div className="container px-4 xs:px-5 sm:px-6">
         <motion.div
           initial={{ opacity: 0, scale: 0.97 }}
