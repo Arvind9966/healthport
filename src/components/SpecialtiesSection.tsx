@@ -51,7 +51,7 @@ const wellness: Specialty[] = [
   { name: "Neuro-Wellness", icon: Brain, rating: "92%", price: "$500" },
 ];
 
-const INITIAL_VISIBLE = 8;
+const INITIAL_VISIBLE = 12;
 
 const SpecialtiesSection = () => {
   const { t } = useLanguage();
@@ -141,7 +141,7 @@ const SpecialtiesSection = () => {
               onClick={() => setShowAll(!showAll)}
               className="flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-muted text-muted-foreground hover:bg-primary/10 hover:text-primary text-xs sm:text-sm font-medium transition-all"
             >
-              {showAll ? "Show Less" : `See All (${currentTab.data.length})`}
+              {showAll ? "Show Less" : "See More"}
               {showAll ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
             </button>
           </div>
