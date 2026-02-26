@@ -1,4 +1,4 @@
-import { MoreVertical } from "lucide-react";
+import { Menu } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import logo from "@/assets/logo.png";
@@ -46,8 +46,8 @@ const Navbar = () => {
         {/* Mobile menu */}
         <Sheet open={open} onOpenChange={setOpen}>
           <SheetTrigger asChild className="lg:hidden">
-            <button className="p-2 rounded-xl hover:bg-muted transition-colors">
-              <MoreVertical className="w-5 h-5 text-foreground" />
+            <button className="p-2 rounded-xl hover:bg-muted transition-all duration-200 hover:scale-110 active:scale-95">
+              <Menu className="w-5 h-5 text-foreground transition-transform duration-200" />
             </button>
           </SheetTrigger>
           <SheetContent side="right" className="w-[280px] pt-12">
