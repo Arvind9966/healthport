@@ -184,6 +184,14 @@ const HospitalNetwork = () => {
           ))}
         </div>
       </div>
+      <div className="container px-4 xs:px-5 sm:px-6 mt-6 xs:mt-8 sm:mt-10 text-center">
+        <Link
+          to="/hospitals"
+          className="inline-flex items-center gap-2 text-sm sm:text-base font-semibold text-primary-foreground bg-primary hover:bg-primary/90 px-6 sm:px-8 py-2.5 sm:py-3 rounded-xl transition-colors duration-200 shadow-md hover:shadow-lg"
+        >
+          Explore All Hospitals →
+        </Link>
+      </div>
     </section>
   );
 };
