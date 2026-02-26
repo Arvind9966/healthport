@@ -22,7 +22,7 @@ const Navbar = () => {
     <header className="sticky top-0 z-50 bg-background/90 backdrop-blur-xl border-b border-border/40 shadow-sm">
       <div className="container flex items-center justify-between h-16 sm:h-20 px-5 sm:px-6">
         <Link to="/" className="flex items-center">
-          <img src={logo} alt="HealthPort" className="h-18 sm:h-20 md:h-24 w-auto object-contain" />
+          <img src={logo} alt="HealthPort" className="h-36 sm:h-40 md:h-48 w-auto object-contain -my-12 sm:-my-14 md:-my-16" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-6 lg:gap-7">
