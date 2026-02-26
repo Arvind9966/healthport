@@ -1,22 +1,68 @@
+import { useState, useEffect, useCallback, useRef } from "react";
 import { ArrowRight, ExternalLink } from "lucide-react";
-import { motion } from "framer-motion";
-import heroBgVideo from "@/assets/hero-bg-video.mp4";
+import { motion, AnimatePresence } from "framer-motion";
+import heroClip1 from "@/assets/hero-clip-1.mp4";
+import heroClip2 from "@/assets/hero-clip-2.mp4";
+import heroClip3 from "@/assets/hero-clip-3.mp4";
+import heroClip4 from "@/assets/hero-clip-4.mp4";
 import { useLanguage } from "@/i18n/LanguageContext";
+
+const heroVideos = [heroClip1, heroClip2, heroClip3, heroClip4];
+const CLIP_DURATION = 3000; // 3 seconds per clip
 
 const HeroSection = () => {
   const { t } = useLanguage();
   const badges = [t("hero_badge1"), t("hero_badge2"), t("hero_badge3"), t("hero_badge4")];
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+
+  const advanceClip = useCallback(() => {
+    setCurrentIndex((prev) => (prev + 1) % heroVideos.length);
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(advanceClip, CLIP_DURATION);
+    return () => clearInterval(interval);
+  }, [advanceClip]);
+
+  // Ensure current video plays
+  useEffect(() => {
+    const video = videoRefs.current[currentIndex];
+    if (video) {
+      video.currentTime = 0;
+      video.play().catch(() => {});
+    }
+  }, [currentIndex]);
 
   return (
     <section className="relative min-h-[85vh] xs:min-h-[90vh] sm:min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Rotating video backgrounds */}
       <div className="absolute inset-0 z-0">
-        <video autoPlay loop muted playsInline className="w-full h-full object-cover scale-105">
-          <source src={heroBgVideo} type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70" />
+        <AnimatePresence mode="sync">
+          <motion.div
+            key={currentIndex}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
+            className="absolute inset-0"
+          >
+            <video
+              ref={(el) => { videoRefs.current[currentIndex] = el; }}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover scale-105"
+            >
+              <source src={heroVideos[currentIndex]} type="video/mp4" />
+            </video>
+          </motion.div>
+        </AnimatePresence>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70 z-10" />
       </div>
 
-      <div className="container px-4 xs:px-5 sm:px-6 text-center relative z-10 py-12 xs:py-16 sm:py-20">
+      <div className="container px-4 xs:px-5 sm:px-6 text-center relative z-20 py-12 xs:py-16 sm:py-20">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -65,7 +111,7 @@ const HeroSection = () => {
         </motion.div>
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent z-10" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent z-20" />
     </section>
   );
 };
