@@ -24,7 +24,7 @@ const LanguageSelector = () => {
         onClick={() => setOpen(!open)}
         className="flex items-center gap-1.5 text-sm font-medium text-foreground/70 hover:text-primary transition-colors duration-200 px-2 py-1.5 rounded-lg hover:bg-muted"
       >
-        <span className="text-base">{current.flag}</span>
+        <img src={current.flag} alt={current.label} className="w-5 h-4 object-contain" />
         <span>{current.label}</span>
         <ChevronDown className={`w-3.5 h-3.5 transition-transform ${open ? "rotate-180" : ""}`} />
       </button>
