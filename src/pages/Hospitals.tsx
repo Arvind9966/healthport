@@ -192,7 +192,7 @@ const hospitalsData: HospitalDetail[] = [
     founded: "1951",
     phone: "+91 22 2445 1515",
     website: "hindujahospital.com",
-    imageUrl: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&q=80",
+    imageUrl: hospitalHinduja,
   },
 ];
 
