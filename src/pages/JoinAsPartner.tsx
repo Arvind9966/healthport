@@ -116,7 +116,7 @@ const JoinAsPartner = () => {
                 Grow Your Medical Referral Business with a Trusted India Network
               </h2>
               <p className="text-muted-foreground text-xs xs:text-sm sm:text-base mb-1.5 xs:mb-2">
-                At HealthPort, we collaborate with medical tourism agents, visa consultants, and healthcare facilitators who want reliable hospital access, transparent pricing, and structured coordination.
+                At HealthRoop, we collaborate with medical tourism agents, visa consultants, and healthcare facilitators who want reliable hospital access, transparent pricing, and structured coordination.
               </p>
               <p className="text-muted-foreground text-xs xs:text-sm sm:text-base mb-4 xs:mb-5 sm:mb-6">
                 Together, we can create seamless patient experiences globally.
