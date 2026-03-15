@@ -22,7 +22,7 @@ const Navbar = () => {
     <header className="sticky top-0 z-50 bg-background/90 backdrop-blur-xl border-b border-border/40 shadow-sm">
       <div className="container flex items-center justify-between h-14 xs:h-16 sm:h-18 md:h-20 lg:h-22 px-3 xs:px-4 sm:px-5 md:px-6">
         <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="flex items-center">
-          <img src={logo} alt="HealthRoop" className="h-20 xs:h-22 sm:h-24 md:h-28 lg:h-32 xl:h-36 w-auto object-contain -my-4 xs:-my-5 sm:-my-6 md:-my-7 lg:-my-8 xl:-my-9" />
+          <img src={logo} alt="HealthRoop" className="h-40 xs:h-44 sm:h-48 md:h-56 lg:h-64 xl:h-72 w-auto object-contain -my-14 xs:-my-16 sm:-my-18 md:-my-20 lg:-my-24 xl:-my-28" />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-4 xl:gap-7">
