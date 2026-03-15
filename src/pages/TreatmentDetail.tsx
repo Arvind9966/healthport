@@ -155,11 +155,9 @@ const TreatmentDetail = () => {
                       <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/10 flex items-center justify-center mb-3 group-hover:from-primary/20 group-hover:to-primary/10 group-hover:scale-105 transition-all duration-300">
                         <SubIcon className="w-7 h-7 sm:w-8 sm:h-8 text-primary" />
                       </div>
-                      <h3 className="text-[11px] sm:text-sm font-semibold text-foreground leading-tight mb-2 min-h-[2rem] sm:min-h-[2.5rem]">
+                      <h3 className="text-[11px] sm:text-sm font-semibold text-foreground leading-tight mb-3 min-h-[2rem] sm:min-h-[2.5rem]">
                         {sub.name}
                       </h3>
-                      <p className="text-[10px] sm:text-xs text-muted-foreground mb-0.5">Packages starting from</p>
-                      <p className="text-sm sm:text-base font-bold text-foreground mb-3">{sub.price}</p>
                       <a
                         href="https://wa.me/919876543210"
                         target="_blank"
