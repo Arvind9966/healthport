@@ -567,6 +567,7 @@ export const translations: Record<Language, TranslationKeys> = {
   },
   TL: {
     nav_hospitals: "Mga Ospital",
+    nav_aboutUs: "Tungkol sa Amin",
     nav_specialties: "Mga Espesyalidad",
     nav_howItWorks: "Paano Ito Gumagana",
     nav_testimonials: "Mga Testimonya",
