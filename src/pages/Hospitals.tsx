@@ -174,7 +174,7 @@ const hospitalsData: HospitalDetail[] = [
     founded: "1989",
     phone: "+91 33 6630 0000",
     website: "bmbirlaheart.com",
-    imageUrl: "https://images.unsplash.com/photo-1530497610245-94d3c16cda28?w=800&q=80",
+    imageUrl: hospitalBmbirla,
   },
   {
     name: "Hinduja Hospital",
