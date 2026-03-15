@@ -1,6 +1,7 @@
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { MapPin, Star, Bed, Shield, Phone, Globe, ArrowLeft } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -297,6 +298,16 @@ const HospitalDetailCard = ({ hospital, index }: { hospital: HospitalDetail; ind
 
 const Hospitals = () => {
   const { t } = useLanguage();
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      setTimeout(() => {
+        const el = document.getElementById(location.hash.slice(1));
+        el?.scrollIntoView({ behavior: "smooth", block: "center" });
+      }, 500);
+    }
+  }, [location.hash]);
 
   return (
     <div className="min-h-screen bg-background">
