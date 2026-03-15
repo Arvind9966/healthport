@@ -143,6 +143,7 @@ type TranslationKeys = {
 export const translations: Record<Language, TranslationKeys> = {
   EN: {
     nav_hospitals: "Hospitals",
+    nav_aboutUs: "About Us",
     nav_specialties: "Specialties",
     nav_howItWorks: "How It Works",
     nav_testimonials: "Testimonials",
