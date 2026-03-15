@@ -12,6 +12,8 @@ import hospitalBmbirla from "@/assets/hospital-bmbirla.jpg";
 import hospitalHcg from "@/assets/hospital-hcg.jpg";
 import hospitalMax from "@/assets/hospital-max.jpg";
 import hospitalManipal from "@/assets/hospital-manipal.jpg";
+import hospitalApollo from "@/assets/hospital-apollo.png";
+import hospitalMedanta from "@/assets/hospital-medanta.png";
 
 type HospitalDetail = {
   name: string;
