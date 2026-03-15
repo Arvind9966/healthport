@@ -940,7 +940,7 @@ export const translations: Record<Language, TranslationKeys> = {
     price_free: "বিনামূল্যে",
     price_startingAt: "শুরু হচ্ছে",
     price_bookNow: "এখনই বুক করুন",
-    price_note: "দ্রষ্টব্য: হাসপাতালের চিকিৎসা ফি সরাসরি হাসপাতালের স্ট্যান্ডার্ড রেটে বিল করা হয় — HealthPort থেকে কোনো মার্কআপ নেই।",
+    price_note: "দ্রষ্টব্য: হাসপাতালের চিকিৎসা ফি সরাসরি হাসপাতালের স্ট্যান্ডার্ড রেটে বিল করা হয় — HealthRoop থেকে কোনো মার্কআপ নেই।",
     price_essential_1: "অংশীদার হাসপাতালে চিকিৎসা",
     price_essential_2: "ডাক্তার পরামর্শ ও ডায়াগনস্টিক ওয়ার্কআপ",
     price_comfort_1: "চিকিৎসা + সুস্থতা থাকা অন্তর্ভুক্ত",
