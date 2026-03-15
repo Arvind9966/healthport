@@ -249,6 +249,7 @@ export const translations: Record<Language, TranslationKeys> = {
   },
   AR: {
     nav_hospitals: "المستشفيات",
+    nav_aboutUs: "من نحن",
     nav_specialties: "التخصصات",
     nav_howItWorks: "كيف يعمل",
     nav_testimonials: "آراء العملاء",
