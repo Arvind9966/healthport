@@ -5,6 +5,7 @@ import SpecialtiesSection from "@/components/SpecialtiesSection";
 import FeaturesSection from "@/components/FeaturesSection";
 import SavingsSection from "@/components/SavingsSection";
 import LowestQuotesSection from "@/components/LowestQuotesSection";
+import TreatmentComparisonChart from "@/components/TreatmentComparisonChart";
 import JourneySteps from "@/components/JourneySteps";
 import ZeroFeesSection from "@/components/ZeroFeesSection";
 import ContactForm from "@/components/ContactForm";
