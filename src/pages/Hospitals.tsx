@@ -198,7 +198,7 @@ const HospitalDetailCard = ({ hospital, index }: { hospital: HospitalDetail; ind
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
     transition={{ duration: 0.5, delay: index * 0.1 }}
-    className="blue-gradient-box border border-primary/10 rounded-2xl overflow-hidden hover:shadow-xl hover:shadow-primary/5 hover:border-primary/20 transition-all duration-300"
+    className="blue-gradient-box border border-primary/10 rounded-2xl overflow-hidden hover:shadow-xl hover:shadow-primary/5 hover:border-primary/20 transition-all duration-300 scroll-mt-24"
   >
     <div className="md:flex">
       {/* Image */}
