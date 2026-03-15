@@ -6,6 +6,11 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { useLanguage } from "@/i18n/LanguageContext";
+import hospitalHinduja from "@/assets/hospital-hinduja.jpg";
+import hospitalNarayana from "@/assets/hospital-narayana.jpg";
+import hospitalBmbirla from "@/assets/hospital-bmbirla.jpg";
+import hospitalHcg from "@/assets/hospital-hcg.jpg";
+import hospitalMax from "@/assets/hospital-max.jpg";
 
 type HospitalDetail = {
   name: string;
