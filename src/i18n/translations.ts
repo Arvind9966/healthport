@@ -350,8 +350,8 @@ export const translations: Record<Language, TranslationKeys> = {
     contact_condition: "أخبرنا عن حالتك...",
     contact_submit: "أرسل استفساري",
     footer_followUs: "تابعنا على",
-    footer_downloadApp: "حمّل تطبيق HealthPort",
-    footer_copyright: "© 2026، HealthPort.com جميع الحقوق محفوظة.",
+    footer_downloadApp: "حمّل تطبيق HealthRoop",
+    footer_copyright: "© 2026، HealthRoop.com جميع الحقوق محفوظة.",
   },
   FR: {
     nav_hospitals: "Hôpitaux",
