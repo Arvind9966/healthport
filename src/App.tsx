@@ -7,6 +7,7 @@ import { LanguageProvider } from "@/i18n/LanguageContext";
 import Index from "./pages/Index";
 import JoinAsPartner from "./pages/JoinAsPartner";
 import Hospitals from "./pages/Hospitals";
+import AboutUs from "./pages/AboutUs";
 import TreatmentDetail from "./pages/TreatmentDetail";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
