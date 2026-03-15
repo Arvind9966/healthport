@@ -298,6 +298,16 @@ const HospitalDetailCard = ({ hospital, index }: { hospital: HospitalDetail; ind
 
 const Hospitals = () => {
   const { t } = useLanguage();
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      setTimeout(() => {
+        const el = document.getElementById(location.hash.slice(1));
+        el?.scrollIntoView({ behavior: "smooth", block: "center" });
+      }, 500);
+    }
+  }, [location.hash]);
 
   return (
     <div className="min-h-screen bg-background">
