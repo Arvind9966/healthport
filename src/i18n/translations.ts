@@ -15,6 +15,7 @@ export const languages: { code: Language; label: string; flag: string }[] = [
 type TranslationKeys = {
   // Navbar
   nav_hospitals: string;
+  nav_aboutUs: string;
   nav_specialties: string;
   nav_howItWorks: string;
   nav_testimonials: string;
