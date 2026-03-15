@@ -159,7 +159,7 @@ const TreatmentDetail = () => {
                         {sub.name}
                       </h3>
                       <a
-                        href="https://wa.me/919876543210"
+                        href="https://wa.me/919602362831"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="mt-auto inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-primary border border-primary/20 hover:bg-primary hover:text-primary-foreground px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg transition-all duration-200 w-full justify-center group/btn"
