@@ -986,8 +986,8 @@ export const translations: Record<Language, TranslationKeys> = {
     contact_condition: "আপনার অবস্থা সম্পর্কে বলুন...",
     contact_submit: "আমার জিজ্ঞাসা জমা দিন",
     footer_followUs: "আমাদের অনুসরণ করুন",
-    footer_downloadApp: "HealthPort অ্যাপ ডাউনলোড করুন",
-    footer_copyright: "© ২০২৬, HealthPort.com সর্বস্বত্ব সংরক্ষিত।",
+    footer_downloadApp: "HealthRoop অ্যাপ ডাউনলোড করুন",
+    footer_copyright: "© ২০২৬, HealthRoop.com সর্বস্বত্ব সংরক্ষিত।",
   },
   AM: {
     nav_hospitals: "ሆስፒታሎች",
