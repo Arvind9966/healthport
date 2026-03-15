@@ -13,6 +13,7 @@ const Navbar = () => {
 
   const navLinks = [
     { label: t("nav_hospitals"), href: "/hospitals", isRoute: true },
+    { label: t("nav_aboutUs"), href: "/about-us", isRoute: true },
     { label: t("nav_specialties"), href: "/#specialties" },
     { label: t("nav_howItWorks"), href: "/#how-it-works" },
     { label: t("nav_contactUs"), href: "/#contact-us" },

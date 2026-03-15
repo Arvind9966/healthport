@@ -15,6 +15,7 @@ export const languages: { code: Language; label: string; flag: string }[] = [
 type TranslationKeys = {
   // Navbar
   nav_hospitals: string;
+  nav_aboutUs: string;
   nav_specialties: string;
   nav_howItWorks: string;
   nav_testimonials: string;
@@ -142,6 +143,7 @@ type TranslationKeys = {
 export const translations: Record<Language, TranslationKeys> = {
   EN: {
     nav_hospitals: "Hospitals",
+    nav_aboutUs: "About Us",
     nav_specialties: "Specialties",
     nav_howItWorks: "How It Works",
     nav_testimonials: "Testimonials",
@@ -247,6 +249,7 @@ export const translations: Record<Language, TranslationKeys> = {
   },
   AR: {
     nav_hospitals: "المستشفيات",
+    nav_aboutUs: "من نحن",
     nav_specialties: "التخصصات",
     nav_howItWorks: "كيف يعمل",
     nav_testimonials: "آراء العملاء",
@@ -352,6 +355,7 @@ export const translations: Record<Language, TranslationKeys> = {
   },
   FR: {
     nav_hospitals: "Hôpitaux",
+    nav_aboutUs: "À propos",
     nav_specialties: "Spécialités",
     nav_howItWorks: "Comment ça marche",
     nav_testimonials: "Témoignages",
@@ -457,6 +461,7 @@ export const translations: Record<Language, TranslationKeys> = {
   },
   RU: {
     nav_hospitals: "Больницы",
+    nav_aboutUs: "О нас",
     nav_specialties: "Специальности",
     nav_howItWorks: "Как это работает",
     nav_testimonials: "Отзывы",
@@ -562,6 +567,7 @@ export const translations: Record<Language, TranslationKeys> = {
   },
   TL: {
     nav_hospitals: "Mga Ospital",
+    nav_aboutUs: "Tungkol sa Amin",
     nav_specialties: "Mga Espesyalidad",
     nav_howItWorks: "Paano Ito Gumagana",
     nav_testimonials: "Mga Testimonya",
@@ -667,6 +673,7 @@ export const translations: Record<Language, TranslationKeys> = {
   },
   ID: {
     nav_hospitals: "Rumah Sakit",
+    nav_aboutUs: "Tentang Kami",
     nav_specialties: "Spesialisasi",
     nav_howItWorks: "Cara Kerja",
     nav_testimonials: "Testimoni",
@@ -772,6 +779,7 @@ export const translations: Record<Language, TranslationKeys> = {
   },
   MS: {
     nav_hospitals: "Hospital",
+    nav_aboutUs: "Tentang Kami",
     nav_specialties: "Kepakaran",
     nav_howItWorks: "Cara Ia Berfungsi",
     nav_testimonials: "Testimoni",
@@ -877,6 +885,7 @@ export const translations: Record<Language, TranslationKeys> = {
   },
   BN: {
     nav_hospitals: "হাসপাতাল",
+    nav_aboutUs: "আমাদের সম্পর্কে",
     nav_specialties: "বিশেষত্ব",
     nav_howItWorks: "এটি কীভাবে কাজ করে",
     nav_testimonials: "প্রশংসাপত্র",
@@ -982,6 +991,7 @@ export const translations: Record<Language, TranslationKeys> = {
   },
   AM: {
     nav_hospitals: "ሆስፒታሎች",
+    nav_aboutUs: "ስለ እኛ",
     nav_specialties: "ስፔሻሊቲዎች",
     nav_howItWorks: "እንዴት ይሰራል",
     nav_testimonials: "ምስክርነቶች",

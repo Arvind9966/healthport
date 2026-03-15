@@ -7,6 +7,7 @@ import { LanguageProvider } from "@/i18n/LanguageContext";
 import Index from "./pages/Index";
 import JoinAsPartner from "./pages/JoinAsPartner";
 import Hospitals from "./pages/Hospitals";
+import AboutUs from "./pages/AboutUs";
 import TreatmentDetail from "./pages/TreatmentDetail";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
@@ -24,6 +25,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/hospitals" element={<Hospitals />} />
+            <Route path="/about-us" element={<AboutUs />} />
             <Route path="/treatment/:slug" element={<TreatmentDetail />} />
             <Route path="/join-as-partner" element={<JoinAsPartner />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
