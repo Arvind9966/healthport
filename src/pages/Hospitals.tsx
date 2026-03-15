@@ -304,7 +304,7 @@ const Hospitals = () => {
     if (location.hash) {
       setTimeout(() => {
         const el = document.getElementById(location.hash.slice(1));
-        el?.scrollIntoView({ behavior: "smooth", block: "center" });
+        el?.scrollIntoView({ behavior: "smooth", block: "start" });
       }, 500);
     }
   }, [location.hash]);
