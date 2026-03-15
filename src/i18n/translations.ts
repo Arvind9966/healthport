@@ -304,7 +304,7 @@ export const translations: Record<Language, TranslationKeys> = {
     price_free: "مجاني",
     price_startingAt: "يبدأ من",
     price_bookNow: "احجز الآن",
-    price_note: "ملاحظة: يتم فوترة رسوم العلاج في المستشفى مباشرة بأسعار المستشفى القياسية — بدون زيادات من HealthPort.",
+    price_note: "ملاحظة: يتم فوترة رسوم العلاج في المستشفى مباشرة بأسعار المستشفى القياسية — بدون زيادات من HealthRoop.",
     price_essential_1: "العلاج في مستشفى شريك",
     price_essential_2: "استشارات الطبيب والتشخيص",
     price_comfort_1: "العلاج + إقامة التعافي",
