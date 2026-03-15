@@ -355,6 +355,7 @@ export const translations: Record<Language, TranslationKeys> = {
   },
   FR: {
     nav_hospitals: "Hôpitaux",
+    nav_aboutUs: "À propos",
     nav_specialties: "Spécialités",
     nav_howItWorks: "Comment ça marche",
     nav_testimonials: "Témoignages",
