@@ -208,7 +208,7 @@ const JoinAsPartner = () => {
       <main id="registration-form" className="py-6 xs:py-8 sm:py-10 md:py-14">
         <div className="container px-4 xs:px-5 sm:px-6 max-w-2xl mx-auto">
           <h2 className="font-display text-xl xs:text-2xl sm:text-3xl md:text-4xl text-center mb-2 xs:mb-3 text-foreground">
-            Welcome to HealthPort Partnership Registration!
+            Welcome to HealthRoop Partnership Registration!
           </h2>
 
           <div className="mt-5 xs:mt-6 sm:mt-8 bg-card border border-border rounded-xl xs:rounded-2xl p-4 xs:p-5 sm:p-6 md:p-8 shadow-sm">
