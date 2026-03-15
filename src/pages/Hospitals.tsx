@@ -146,7 +146,7 @@ const hospitalsData: HospitalDetail[] = [
   {
     name: "HCG Cancer Centre",
     shortName: "HCG",
-    location: "Bangalore & 24+ centres",
+    location: "Bangalore, Delhi & 24+ centres",
     city: "Bangalore (HQ)",
     beds: "2,000+",
     rating: "4.6",
