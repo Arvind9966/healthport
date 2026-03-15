@@ -172,7 +172,7 @@ const JoinAsPartner = () => {
       <section className="py-6 xs:py-8 sm:py-10 md:py-14 border-t border-border">
         <div className="container px-4 xs:px-5 sm:px-6">
           <h2 className="font-display text-xl xs:text-2xl sm:text-3xl md:text-4xl text-center mb-6 xs:mb-8 sm:mb-10 text-foreground">
-            How HealthPort <span className="text-primary">Works?</span>
+            How HealthRoop <span className="text-primary">Works?</span>
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 xs:gap-4 sm:gap-5">
             {howItWorks.map((item, i) => (
