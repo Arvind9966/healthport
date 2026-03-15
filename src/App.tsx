@@ -3,7 +3,6 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { LanguageProvider } from "@/i18n/LanguageContext";
 import Index from "./pages/Index";
 import JoinAsPartner from "./pages/JoinAsPartner";
 import Hospitals from "./pages/Hospitals";
@@ -17,22 +16,20 @@ const queryClient = new QueryClient();
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      <LanguageProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <ScrollToTop />
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/hospitals" element={<Hospitals />} />
-            <Route path="/about-us" element={<AboutUs />} />
-            <Route path="/treatment/:slug" element={<TreatmentDetail />} />
-            <Route path="/join-as-partner" element={<JoinAsPartner />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </BrowserRouter>
-      </LanguageProvider>
+      <Toaster />
+      <Sonner />
+      <BrowserRouter>
+        <ScrollToTop />
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/hospitals" element={<Hospitals />} />
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/treatment/:slug" element={<TreatmentDetail />} />
+          <Route path="/join-as-partner" element={<JoinAsPartner />} />
+          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
 );
