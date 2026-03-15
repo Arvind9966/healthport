@@ -1,15 +1,15 @@
 export type Language = "EN" | "AR" | "FR" | "RU" | "TL" | "ID" | "MS" | "BN" | "AM";
 
 export const languages: { code: Language; label: string; flag: string }[] = [
-  { code: "EN", label: "EN", flag: "🇬🇧" },
-  { code: "AR", label: "AR", flag: "🇸🇦" },
-  { code: "FR", label: "FR", flag: "🇫🇷" },
-  { code: "RU", label: "RU", flag: "🇷🇺" },
-  { code: "TL", label: "TL", flag: "🇵🇭" },
-  { code: "ID", label: "ID", flag: "🇮🇩" },
-  { code: "MS", label: "MS", flag: "🇲🇾" },
-  { code: "BN", label: "BN", flag: "🇧🇩" },
-  { code: "AM", label: "AM", flag: "🇪🇹" },
+  { code: "EN", label: "EN", flag: "https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ec-1f1e7.svg" },
+  { code: "AR", label: "AR", flag: "https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f8-1f1e6.svg" },
+  { code: "FR", label: "FR", flag: "https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1eb-1f1f7.svg" },
+  { code: "RU", label: "RU", flag: "https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f7-1f1fa.svg" },
+  { code: "TL", label: "TL", flag: "https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f5-1f1ed.svg" },
+  { code: "ID", label: "ID", flag: "https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ee-1f1e9.svg" },
+  { code: "MS", label: "MS", flag: "https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1f2-1f1fe.svg" },
+  { code: "BN", label: "BN", flag: "https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1e7-1f1e9.svg" },
+  { code: "AM", label: "AM", flag: "https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f1ea-1f1f9.svg" },
 ];
 
 type TranslationKeys = {

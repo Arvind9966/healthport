@@ -45,7 +45,7 @@ const LanguageSelector = () => {
               ) : (
                 <span className="w-4" />
               )}
-              <span className="text-base">{lang.flag}</span>
+              <img src={lang.flag} alt={lang.label} className="w-5 h-4 object-contain" />
               <span className="font-medium">{lang.label}</span>
             </button>
           ))}
