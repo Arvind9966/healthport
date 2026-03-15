@@ -1046,7 +1046,7 @@ export const translations: Record<Language, TranslationKeys> = {
     price_free: "ነፃ",
     price_startingAt: "ከ",
     price_bookNow: "አሁን ያስይዙ",
-    price_note: "ማሳሰቢያ: የሆስፒታል ሕክምና ክፍያዎች በሆስፒታሉ ደረጃ ታሪፍ በቀጥታ ይከፈላሉ — HealthPort ምንም ተጨማሪ አያስከፍልም።",
+    price_note: "ማሳሰቢያ: የሆስፒታል ሕክምና ክፍያዎች በሆስፒታሉ ደረጃ ታሪፍ በቀጥታ ይከፈላሉ — HealthRoop ምንም ተጨማሪ አያስከፍልም።",
     price_essential_1: "በአጋር ሆስፒታል ሕክምና",
     price_essential_2: "የዶክተር ምክክር እና ምርመራ",
     price_comfort_1: "ሕክምና + የማገገሚያ ቆይታ ተካቷል",
