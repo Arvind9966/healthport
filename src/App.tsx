@@ -16,22 +16,20 @@ const queryClient = new QueryClient();
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      <LanguageProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <ScrollToTop />
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/hospitals" element={<Hospitals />} />
-            <Route path="/about-us" element={<AboutUs />} />
-            <Route path="/treatment/:slug" element={<TreatmentDetail />} />
-            <Route path="/join-as-partner" element={<JoinAsPartner />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </BrowserRouter>
-      </LanguageProvider>
+      <Toaster />
+      <Sonner />
+      <BrowserRouter>
+        <ScrollToTop />
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/hospitals" element={<Hospitals />} />
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/treatment/:slug" element={<TreatmentDetail />} />
+          <Route path="/join-as-partner" element={<JoinAsPartner />} />
+          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
 );
