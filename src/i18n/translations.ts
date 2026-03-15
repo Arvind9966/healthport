@@ -516,7 +516,7 @@ export const translations: Record<Language, TranslationKeys> = {
     price_free: "БЕСПЛАТНО",
     price_startingAt: "От",
     price_bookNow: "Забронировать",
-    price_note: "Примечание: Стоимость лечения в больнице рассчитывается по стандартным тарифам больницы — без наценок от HealthPort.",
+    price_note: "Примечание: Стоимость лечения в больнице рассчитывается по стандартным тарифам больницы — без наценок от HealthRoop.",
     price_essential_1: "Лечение в партнёрской больнице",
     price_essential_2: "Консультации врачей и диагностика",
     price_comfort_1: "Лечение + проживание для восстановления",
