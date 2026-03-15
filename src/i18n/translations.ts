@@ -779,6 +779,7 @@ export const translations: Record<Language, TranslationKeys> = {
   },
   MS: {
     nav_hospitals: "Hospital",
+    nav_aboutUs: "Tentang Kami",
     nav_specialties: "Kepakaran",
     nav_howItWorks: "Cara Ia Berfungsi",
     nav_testimonials: "Testimoni",
