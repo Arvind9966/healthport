@@ -260,9 +260,6 @@ const TreatmentDetail = () => {
               <div className="p-5 sm:p-6" style={{
                 background: "linear-gradient(135deg, hsl(207 60% 97%) 0%, hsl(207 80% 92%) 50%, hsl(207 70% 95%) 100%)",
               }}>
-                <p className="text-xs text-muted-foreground font-medium uppercase tracking-wider mb-1">Packages starting from</p>
-                <p className="text-3xl sm:text-4xl font-bold text-foreground mb-4">{treatment.startingPrice}</p>
-
                 <p className="text-sm text-foreground font-medium mb-3">Need help choosing the right package?</p>
                 <a
                   href="https://wa.me/919876543210"
