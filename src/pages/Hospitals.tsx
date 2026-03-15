@@ -210,11 +210,11 @@ const HospitalDetailCard = ({ hospital, index }: { hospital: HospitalDetail; ind
   >
     <div className="md:flex">
       {/* Image */}
-      <div className="md:w-2/5 relative overflow-hidden">
+      <div className="md:w-2/5 relative p-3 sm:p-4">
         <img
           src={hospital.imageUrl}
           alt={hospital.name}
-          className="w-full h-56 md:h-full object-contain bg-muted/30"
+          className="w-full h-52 md:h-full object-cover rounded-xl"
           loading="lazy"
         />
         <div className="absolute top-3 left-3 flex gap-2">
