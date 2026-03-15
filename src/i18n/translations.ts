@@ -198,7 +198,7 @@ export const translations: Record<Language, TranslationKeys> = {
     price_free: "FREE",
     price_startingAt: "Starting at",
     price_bookNow: "Book Now",
-    price_note: "Note: Hospital treatment fees are billed directly at the hospital's standard rates — no markups from HealthPort.",
+    price_note: "Note: Hospital treatment fees are billed directly at the hospital's standard rates — no markups from HealthRoop.",
     price_essential_1: "Treatment at partner hospital",
     price_essential_2: "Doctor consultations & diagnostic workup",
     price_comfort_1: "Treatment + recovery stay included",
