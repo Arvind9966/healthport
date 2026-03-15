@@ -221,7 +221,7 @@ const HospitalDetailCard = ({ hospital, index }: { hospital: HospitalDetail; ind
             {hospital.accreditation}
           </span>
         </div>
-        <div className={`absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t ${hospital.color} opacity-30`} />
+        
       </div>
 
       {/* Content */}
