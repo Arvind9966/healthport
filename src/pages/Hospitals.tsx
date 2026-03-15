@@ -102,7 +102,7 @@ const hospitalsData: HospitalDetail[] = [
     founded: "2000",
     phone: "+91 80 7122 2222",
     website: "narayanahealth.org",
-    imageUrl: "https://images.unsplash.com/photo-1551190822-a9333d879b1f?w=800&q=80",
+    imageUrl: hospitalNarayana,
   },
   {
     name: "Manipal Hospitals",
