@@ -218,7 +218,6 @@ const TreatmentDetail = () => {
                     <div key={proc.name} className="bg-background/80 backdrop-blur-sm border border-border/50 rounded-xl p-5 hover-lift">
                       <div className="flex flex-wrap items-start justify-between gap-2 mb-2">
                         <h3 className="font-semibold text-foreground text-sm sm:text-base">{proc.name}</h3>
-                        <span className="text-xs sm:text-sm font-bold text-primary bg-primary/10 px-3 py-1 rounded-full">{proc.cost}</span>
                       </div>
                       <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{proc.description}</p>
                     </div>
