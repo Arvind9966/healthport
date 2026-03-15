@@ -110,7 +110,7 @@ const JoinAsPartner = () => {
             <div>
               <p className="text-[10px] xs:text-xs sm:text-sm text-muted-foreground mb-1.5 xs:mb-2">Home &gt; Join as a Partner</p>
               <h1 className="font-display text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight text-foreground mt-3 xs:mt-4 sm:mt-6 mb-2 xs:mb-3">
-                Partner with HealthPort
+                Partner with HealthRoop
               </h1>
               <h2 className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl text-primary font-medium mb-3 xs:mb-4">
                 Grow Your Medical Referral Business with a Trusted India Network
