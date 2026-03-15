@@ -214,7 +214,7 @@ const HospitalDetailCard = ({ hospital, index }: { hospital: HospitalDetail; ind
         <img
           src={hospital.imageUrl}
           alt={hospital.name}
-          className="w-full h-56 md:h-full object-cover"
+          className="w-full h-56 md:h-full object-contain bg-muted/30"
           loading="lazy"
         />
         <div className="absolute top-3 left-3 flex gap-2">
