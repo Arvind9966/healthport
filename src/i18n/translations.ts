@@ -1092,7 +1092,7 @@ export const translations: Record<Language, TranslationKeys> = {
     contact_condition: "ስለ ሁኔታዎ ይንገሩን...",
     contact_submit: "ጥያቄዬን ያስገቡ",
     footer_followUs: "ይከተሉን",
-    footer_downloadApp: "HealthPort መተግበሪያ ያውርዱ",
-    footer_copyright: "© 2026፣ HealthPort.com መብቶች በሙሉ የተጠበቁ ናቸው።",
+    footer_downloadApp: "HealthRoop መተግበሪያ ያውርዱ",
+    footer_copyright: "© 2026፣ HealthRoop.com መብቶች በሙሉ የተጠበቁ ናቸው።",
   },
 };
