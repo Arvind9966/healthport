@@ -138,7 +138,7 @@ const hospitalsData: HospitalDetail[] = [
     founded: "2000",
     phone: "+91 11 2651 5050",
     website: "maxhealthcare.in",
-    imageUrl: "https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?w=800&q=80",
+    imageUrl: hospitalMax,
   },
   {
     name: "HCG Cancer Centre",
