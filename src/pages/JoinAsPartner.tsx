@@ -65,7 +65,7 @@ const features = [
 ];
 
 const howItWorks = [
-  { icon: ClipboardCheck, title: "Onboarding", description: "We provide a comprehensive onboarding checklist to activate your HealthPort partnership." },
+  { icon: ClipboardCheck, title: "Onboarding", description: "We provide a comprehensive onboarding checklist to activate your HealthRoop partnership." },
   { icon: GraduationCap, title: "Training", description: "Our training programs empower your team with essential training tools, setting you up for success." },
   { icon: HeadphonesIcon, title: "Support", description: "We offer dedicated support to new partners, building a comfortable and trusting relationship." },
   { icon: BarChart3, title: "Reporting", description: "Data, reports, and analytics are streamlined to ensure real-time, accurate, and consistent reporting." },
