@@ -22,6 +22,7 @@ const Index = () => {
       <FeaturesSection />
       <SavingsSection />
       <LowestQuotesSection />
+      <TreatmentComparisonChart />
       <JourneySteps />
       <ZeroFeesSection />
       <ContactForm />
