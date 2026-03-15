@@ -834,7 +834,7 @@ export const translations: Record<Language, TranslationKeys> = {
     price_free: "PERCUMA",
     price_startingAt: "Bermula dari",
     price_bookNow: "Tempah Sekarang",
-    price_note: "Nota: Yuran rawatan hospital dicaj terus pada kadar standard hospital — tiada markup daripada HealthPort.",
+    price_note: "Nota: Yuran rawatan hospital dicaj terus pada kadar standard hospital — tiada markup daripada HealthRoop.",
     price_essential_1: "Rawatan di hospital rakan",
     price_essential_2: "Perundingan doktor & pemeriksaan diagnostik",
     price_comfort_1: "Rawatan + penginapan pemulihan termasuk",
