@@ -92,7 +92,7 @@ const hospitalsData: HospitalDetail[] = [
   {
     name: "Narayana Health",
     shortName: "N",
-    location: "Bangalore, Kolkata & 19+ cities",
+    location: "Bangalore, Delhi, Kolkata & 19+ cities",
     city: "Bangalore (HQ)",
     beds: "6,200+",
     rating: "4.5",
