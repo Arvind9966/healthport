@@ -673,6 +673,7 @@ export const translations: Record<Language, TranslationKeys> = {
   },
   ID: {
     nav_hospitals: "Rumah Sakit",
+    nav_aboutUs: "Tentang Kami",
     nav_specialties: "Spesialisasi",
     nav_howItWorks: "Cara Kerja",
     nav_testimonials: "Testimoni",
