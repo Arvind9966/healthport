@@ -885,6 +885,7 @@ export const translations: Record<Language, TranslationKeys> = {
   },
   BN: {
     nav_hospitals: "হাসপাতাল",
+    nav_aboutUs: "আমাদের সম্পর্কে",
     nav_specialties: "বিশেষত্ব",
     nav_howItWorks: "এটি কীভাবে কাজ করে",
     nav_testimonials: "প্রশংসাপত্র",
