@@ -26,7 +26,7 @@ const LowestQuotesSection = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-8 sm:mb-12"
         >
-          <h2 className="font-display text-xl xs:text-2xl sm:text-3xl md:text-4xl italic mb-3">
+          <h2 className="font-display text-xl xs:text-2xl sm:text-3xl md:text-4xl mb-3">
             Lowest Quotes Assured
           </h2>
           <p className="text-muted-foreground text-xs xs:text-sm sm:text-base max-w-2xl mx-auto">

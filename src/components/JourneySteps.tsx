@@ -23,7 +23,7 @@ const JourneySteps = () => {
           transition={{ duration: 0.5 }}
           className="text-center"
         >
-          <h2 className="font-display text-xl xs:text-2xl sm:text-3xl md:text-4xl italic mb-3">
+          <h2 className="font-display text-xl xs:text-2xl sm:text-3xl md:text-4xl mb-3">
             {t("journey_title")}
           </h2>
           <p className="text-muted-foreground text-xs xs:text-sm sm:text-base mb-8 xs:mb-10 sm:mb-14">{t("journey_subtitle")}</p>
