@@ -87,7 +87,7 @@ const hospitalsData: HospitalDetail[] = [
     founded: "2009",
     phone: "+91 124 414 1414",
     website: "medanta.org",
-    imageUrl: "https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=800&q=80",
+    imageUrl: hospitalMedanta,
   },
   {
     name: "Narayana Health",
