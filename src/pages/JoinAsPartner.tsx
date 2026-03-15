@@ -23,7 +23,10 @@ const countries = [
   "Germany", "France", "UAE", "Saudi Arabia", "Singapore", "Malaysia",
   "Thailand", "Turkey", "South Korea", "Japan", "Brazil", "Mexico",
   "South Africa", "Nigeria", "Kenya", "Egypt", "Indonesia", "Philippines",
-];
+  "Bangladesh", "Afghanistan", "Iran", "Iraq", "Kazakhstan", "Yemen",
+  "Oman", "Sudan", "Tanzania", "Chad", "Libya", "Sri Lanka", "Myanmar",
+  "Bhutan",
+].sort();
 
 const phoneCodes = [
   { code: "+91", country: "IN" },
