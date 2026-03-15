@@ -622,7 +622,7 @@ export const translations: Record<Language, TranslationKeys> = {
     price_free: "LIBRE",
     price_startingAt: "Nagsisimula sa",
     price_bookNow: "Mag-book Ngayon",
-    price_note: "Tandaan: Ang mga bayarin sa paggamot sa ospital ay sinisingil nang direkta sa standard na rate ng ospital — walang markup mula sa HealthPort.",
+    price_note: "Tandaan: Ang mga bayarin sa paggamot sa ospital ay sinisingil nang direkta sa standard na rate ng ospital — walang markup mula sa HealthRoop.",
     price_essential_1: "Paggamot sa partner na ospital",
     price_essential_2: "Konsultasyon at diagnostic workup",
     price_comfort_1: "Paggamot + recovery stay kasama",
