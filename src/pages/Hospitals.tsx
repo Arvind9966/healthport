@@ -121,7 +121,7 @@ const hospitalsData: HospitalDetail[] = [
     founded: "1953",
     phone: "+91 80 2502 4444",
     website: "manipalhospitals.com",
-    imageUrl: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=800&q=80",
+    imageUrl: hospitalManipal,
   },
   {
     name: "Max Healthcare",
