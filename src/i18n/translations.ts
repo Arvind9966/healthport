@@ -456,8 +456,8 @@ export const translations: Record<Language, TranslationKeys> = {
     contact_condition: "Décrivez votre condition...",
     contact_submit: "Envoyer ma demande",
     footer_followUs: "Suivez-nous sur",
-    footer_downloadApp: "Télécharger l'application HealthPort",
-    footer_copyright: "© 2026, HealthPort.com Tous droits réservés.",
+    footer_downloadApp: "Télécharger l'application HealthRoop",
+    footer_copyright: "© 2026, HealthRoop.com Tous droits réservés.",
   },
   RU: {
     nav_hospitals: "Больницы",
