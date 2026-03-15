@@ -65,7 +65,7 @@ const features = [
 ];
 
 const howItWorks = [
-  { icon: ClipboardCheck, title: "Onboarding", description: "We provide a comprehensive onboarding checklist to activate your HealthPort partnership." },
+  { icon: ClipboardCheck, title: "Onboarding", description: "We provide a comprehensive onboarding checklist to activate your HealthRoop partnership." },
   { icon: GraduationCap, title: "Training", description: "Our training programs empower your team with essential training tools, setting you up for success." },
   { icon: HeadphonesIcon, title: "Support", description: "We offer dedicated support to new partners, building a comfortable and trusting relationship." },
   { icon: BarChart3, title: "Reporting", description: "Data, reports, and analytics are streamlined to ensure real-time, accurate, and consistent reporting." },
@@ -110,13 +110,13 @@ const JoinAsPartner = () => {
             <div>
               <p className="text-[10px] xs:text-xs sm:text-sm text-muted-foreground mb-1.5 xs:mb-2">Home &gt; Join as a Partner</p>
               <h1 className="font-display text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl leading-tight text-foreground mt-3 xs:mt-4 sm:mt-6 mb-2 xs:mb-3">
-                Partner with HealthPort
+                Partner with HealthRoop
               </h1>
               <h2 className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl text-primary font-medium mb-3 xs:mb-4">
                 Grow Your Medical Referral Business with a Trusted India Network
               </h2>
               <p className="text-muted-foreground text-xs xs:text-sm sm:text-base mb-1.5 xs:mb-2">
-                At HealthPort, we collaborate with medical tourism agents, visa consultants, and healthcare facilitators who want reliable hospital access, transparent pricing, and structured coordination.
+                At HealthRoop, we collaborate with medical tourism agents, visa consultants, and healthcare facilitators who want reliable hospital access, transparent pricing, and structured coordination.
               </p>
               <p className="text-muted-foreground text-xs xs:text-sm sm:text-base mb-4 xs:mb-5 sm:mb-6">
                 Together, we can create seamless patient experiences globally.
@@ -172,7 +172,7 @@ const JoinAsPartner = () => {
       <section className="py-6 xs:py-8 sm:py-10 md:py-14 border-t border-border">
         <div className="container px-4 xs:px-5 sm:px-6">
           <h2 className="font-display text-xl xs:text-2xl sm:text-3xl md:text-4xl text-center mb-6 xs:mb-8 sm:mb-10 text-foreground">
-            How HealthPort <span className="text-primary">Works?</span>
+            How HealthRoop <span className="text-primary">Works?</span>
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 xs:gap-4 sm:gap-5">
             {howItWorks.map((item, i) => (
@@ -208,7 +208,7 @@ const JoinAsPartner = () => {
       <main id="registration-form" className="py-6 xs:py-8 sm:py-10 md:py-14">
         <div className="container px-4 xs:px-5 sm:px-6 max-w-2xl mx-auto">
           <h2 className="font-display text-xl xs:text-2xl sm:text-3xl md:text-4xl text-center mb-2 xs:mb-3 text-foreground">
-            Welcome to HealthPort Partnership Registration!
+            Welcome to HealthRoop Partnership Registration!
           </h2>
 
           <div className="mt-5 xs:mt-6 sm:mt-8 bg-card border border-border rounded-xl xs:rounded-2xl p-4 xs:p-5 sm:p-6 md:p-8 shadow-sm">
