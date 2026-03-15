@@ -410,7 +410,7 @@ export const translations: Record<Language, TranslationKeys> = {
     price_free: "GRATUIT",
     price_startingAt: "À partir de",
     price_bookNow: "Réserver",
-    price_note: "Note : Les frais de traitement hospitalier sont facturés directement aux tarifs standard de l'hôpital — sans majoration de HealthPort.",
+    price_note: "Note : Les frais de traitement hospitalier sont facturés directement aux tarifs standard de l'hôpital — sans majoration de HealthRoop.",
     price_essential_1: "Traitement dans un hôpital partenaire",
     price_essential_2: "Consultations médicales et bilan diagnostique",
     price_comfort_1: "Traitement + séjour de récupération inclus",
