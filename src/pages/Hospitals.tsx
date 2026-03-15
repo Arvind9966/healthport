@@ -12,6 +12,8 @@ import hospitalBmbirla from "@/assets/hospital-bmbirla.jpg";
 import hospitalHcg from "@/assets/hospital-hcg.jpg";
 import hospitalMax from "@/assets/hospital-max.jpg";
 import hospitalManipal from "@/assets/hospital-manipal.jpg";
+import hospitalApollo from "@/assets/hospital-apollo.png";
+import hospitalMedanta from "@/assets/hospital-medanta.png";
 
 type HospitalDetail = {
   name: string;
@@ -49,7 +51,7 @@ const hospitalsData: HospitalDetail[] = [
     founded: "1983",
     phone: "+91 44 2829 0200",
     website: "apollohospitals.com",
-    imageUrl: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&q=80",
+    imageUrl: hospitalApollo,
   },
   {
     name: "Fortis Healthcare",
@@ -85,7 +87,7 @@ const hospitalsData: HospitalDetail[] = [
     founded: "2009",
     phone: "+91 124 414 1414",
     website: "medanta.org",
-    imageUrl: "https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=800&q=80",
+    imageUrl: hospitalMedanta,
   },
   {
     name: "Narayana Health",
