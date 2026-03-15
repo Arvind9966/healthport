@@ -155,19 +155,20 @@ const TreatmentComparisonChart = () => {
                         >
                           {item.country}
                         </span>
-                        <div className="flex-1 min-w-0">
+                        <div className="flex-1 min-w-0 overflow-hidden">
                           {item.na ? (
                             <span className="text-xs text-muted-foreground italic">N/A</span>
                           ) : (
-                            <div className="flex items-center gap-1.5 xs:gap-2">
+                            <div className="flex items-center gap-1.5 xs:gap-2 overflow-hidden">
                               <motion.div
                                 className={`h-6 xs:h-7 sm:h-9 rounded-md ${barColor} flex-shrink-0`}
+                                style={{ maxWidth: "75%" }}
                                 initial={{ width: 0 }}
                                 animate={{ width: `${Math.max(widthPercent, 5)}%` }}
                                 transition={{ duration: 0.7, delay: idx * 0.1, ease: "easeOut" }}
                               />
                               <span
-                                className={`text-[9px] xs:text-[10px] sm:text-xs font-medium whitespace-nowrap flex-shrink-0 ${
+                                className={`text-[9px] xs:text-[10px] sm:text-xs font-medium whitespace-nowrap ${
                                   isIndia ? "text-primary" : "text-foreground/70"
                                 }`}
                               >
