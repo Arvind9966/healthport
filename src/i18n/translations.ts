@@ -880,8 +880,8 @@ export const translations: Record<Language, TranslationKeys> = {
     contact_condition: "Beritahu kami tentang keadaan anda...",
     contact_submit: "Hantar Pertanyaan Saya",
     footer_followUs: "Ikuti kami di",
-    footer_downloadApp: "Muat turun Aplikasi HealthPort",
-    footer_copyright: "© 2026, HealthPort.com Hak cipta terpelihara.",
+    footer_downloadApp: "Muat turun Aplikasi HealthRoop",
+    footer_copyright: "© 2026, HealthRoop.com Hak cipta terpelihara.",
   },
   BN: {
     nav_hospitals: "হাসপাতাল",
