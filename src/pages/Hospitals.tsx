@@ -11,6 +11,7 @@ import hospitalNarayana from "@/assets/hospital-narayana.jpg";
 import hospitalBmbirla from "@/assets/hospital-bmbirla.jpg";
 import hospitalHcg from "@/assets/hospital-hcg.jpg";
 import hospitalMax from "@/assets/hospital-max.jpg";
+import hospitalManipal from "@/assets/hospital-manipal.jpg";
 
 type HospitalDetail = {
   name: string;
@@ -120,7 +121,7 @@ const hospitalsData: HospitalDetail[] = [
     founded: "1953",
     phone: "+91 80 2502 4444",
     website: "manipalhospitals.com",
-    imageUrl: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=800&q=80",
+    imageUrl: hospitalManipal,
   },
   {
     name: "Max Healthcare",
