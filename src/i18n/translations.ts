@@ -728,7 +728,7 @@ export const translations: Record<Language, TranslationKeys> = {
     price_free: "GRATIS",
     price_startingAt: "Mulai dari",
     price_bookNow: "Pesan Sekarang",
-    price_note: "Catatan: Biaya perawatan rumah sakit ditagih langsung dengan tarif standar rumah sakit — tanpa markup dari HealthPort.",
+    price_note: "Catatan: Biaya perawatan rumah sakit ditagih langsung dengan tarif standar rumah sakit — tanpa markup dari HealthRoop.",
     price_essential_1: "Perawatan di rumah sakit mitra",
     price_essential_2: "Konsultasi dokter & pemeriksaan diagnostik",
     price_comfort_1: "Perawatan + masa pemulihan termasuk",
