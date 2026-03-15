@@ -156,7 +156,7 @@ const hospitalsData: HospitalDetail[] = [
     founded: "1989",
     phone: "+91 80 3355 3555",
     website: "hcgoncology.com",
-    imageUrl: "https://images.unsplash.com/photo-1516549655169-df83a0774514?w=800&q=80",
+    imageUrl: hospitalHcg,
   },
   {
     name: "BM Birla Heart Research",
