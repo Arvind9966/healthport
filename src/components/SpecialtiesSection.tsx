@@ -131,9 +131,7 @@ const SpecialtiesSection = () => {
                   </div>
                   <span className="font-medium text-foreground text-[10px] xs:text-[11px] sm:text-xs leading-tight mb-1.5 xs:mb-2 sm:mb-3 min-h-[1.5rem] xs:min-h-[2rem] sm:min-h-[2.5rem]">{name}</span>
                   <p className="text-primary text-[9px] xs:text-[10px] sm:text-xs font-medium">{rating} {t("spec_rated")}</p>
-                  <p className="text-primary/70 text-[8px] xs:text-[9px] sm:text-[10px] mb-1 xs:mb-2">{t("spec_valueForMoney")}</p>
-                  <p className="text-[9px] xs:text-[10px] sm:text-xs text-muted-foreground">{t("spec_packagesFrom")}</p>
-                  <p className="text-primary text-[10px] xs:text-xs sm:text-sm font-bold">{price}</p>
+                  <p className="text-primary/70 text-[8px] xs:text-[9px] sm:text-[10px]">{t("spec_valueForMoney")}</p>
                 </motion.div>
               </Link>
             ))}
