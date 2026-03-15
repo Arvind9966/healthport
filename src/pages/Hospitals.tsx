@@ -6,6 +6,11 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { useLanguage } from "@/i18n/LanguageContext";
+import hospitalHinduja from "@/assets/hospital-hinduja.jpg";
+import hospitalNarayana from "@/assets/hospital-narayana.jpg";
+import hospitalBmbirla from "@/assets/hospital-bmbirla.jpg";
+import hospitalHcg from "@/assets/hospital-hcg.jpg";
+import hospitalMax from "@/assets/hospital-max.jpg";
 
 type HospitalDetail = {
   name: string;
@@ -97,7 +102,7 @@ const hospitalsData: HospitalDetail[] = [
     founded: "2000",
     phone: "+91 80 7122 2222",
     website: "narayanahealth.org",
-    imageUrl: "https://images.unsplash.com/photo-1551190822-a9333d879b1f?w=800&q=80",
+    imageUrl: hospitalNarayana,
   },
   {
     name: "Manipal Hospitals",
@@ -133,7 +138,7 @@ const hospitalsData: HospitalDetail[] = [
     founded: "2000",
     phone: "+91 11 2651 5050",
     website: "maxhealthcare.in",
-    imageUrl: "https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?w=800&q=80",
+    imageUrl: hospitalMax,
   },
   {
     name: "HCG Cancer Centre",
@@ -151,7 +156,7 @@ const hospitalsData: HospitalDetail[] = [
     founded: "1989",
     phone: "+91 80 3355 3555",
     website: "hcgoncology.com",
-    imageUrl: "https://images.unsplash.com/photo-1516549655169-df83a0774514?w=800&q=80",
+    imageUrl: hospitalHcg,
   },
   {
     name: "BM Birla Heart Research",
@@ -169,7 +174,7 @@ const hospitalsData: HospitalDetail[] = [
     founded: "1989",
     phone: "+91 33 6630 0000",
     website: "bmbirlaheart.com",
-    imageUrl: "https://images.unsplash.com/photo-1530497610245-94d3c16cda28?w=800&q=80",
+    imageUrl: hospitalBmbirla,
   },
   {
     name: "Hinduja Hospital",
@@ -187,7 +192,7 @@ const hospitalsData: HospitalDetail[] = [
     founded: "1951",
     phone: "+91 22 2445 1515",
     website: "hindujahospital.com",
-    imageUrl: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&q=80",
+    imageUrl: hospitalHinduja,
   },
 ];
 
