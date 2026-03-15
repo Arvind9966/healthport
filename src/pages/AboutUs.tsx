@@ -222,12 +222,12 @@ const AboutUs = () => {
               individuals to access the treatment they need with confidence and
               peace of mind.
             </p>
-            <Link
-              to="/#contact-us"
+            <a
+              href="/#contact-us"
               className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-7 py-3.5 rounded-full text-sm font-medium hover:opacity-90 transition-all shadow-lg shadow-primary/30 hover:shadow-xl hover:shadow-primary/40 hover:scale-[1.02] active:scale-[0.98]"
             >
               Get in Touch <ArrowRight className="w-4 h-4" />
-            </Link>
+            </a>
           </motion.div>
         </div>
       </section>
