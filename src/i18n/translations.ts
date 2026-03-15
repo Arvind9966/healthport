@@ -668,8 +668,8 @@ export const translations: Record<Language, TranslationKeys> = {
     contact_condition: "Sabihin sa amin ang iyong kondisyon...",
     contact_submit: "Isumite ang Aking Inquiry",
     footer_followUs: "Sundan kami sa",
-    footer_downloadApp: "I-download ang HealthPort App",
-    footer_copyright: "© 2026, HealthPort.com Lahat ng karapatan ay nakalaan.",
+    footer_downloadApp: "I-download ang HealthRoop App",
+    footer_copyright: "© 2026, HealthRoop.com Lahat ng karapatan ay nakalaan.",
   },
   ID: {
     nav_hospitals: "Rumah Sakit",
