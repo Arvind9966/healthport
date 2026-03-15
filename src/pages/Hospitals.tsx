@@ -92,7 +92,7 @@ const hospitalsData: HospitalDetail[] = [
   {
     name: "Narayana Health",
     shortName: "N",
-    location: "Bangalore, Kolkata & 19+ cities",
+    location: "Bangalore, Delhi, Kolkata & 19+ cities",
     city: "Bangalore (HQ)",
     beds: "6,200+",
     rating: "4.5",
@@ -146,7 +146,7 @@ const hospitalsData: HospitalDetail[] = [
   {
     name: "HCG Cancer Centre",
     shortName: "HCG",
-    location: "Bangalore & 24+ centres",
+    location: "Bangalore, Delhi & 24+ centres",
     city: "Bangalore (HQ)",
     beds: "2,000+",
     rating: "4.6",
@@ -294,10 +294,23 @@ const HospitalDetailCard = ({ hospital, index }: { hospital: HospitalDetail; ind
         </div>
 
         {/* Footer Info */}
-        <div className="flex flex-wrap items-center gap-x-5 gap-y-2 pt-2 border-t border-border/30 text-xs text-muted-foreground">
-          <span>Est. {hospital.founded}</span>
-          <span className="flex items-center gap-1"><Phone className="w-3 h-3" />{hospital.phone}</span>
-          <span className="flex items-center gap-1"><Globe className="w-3 h-3" />{hospital.website}</span>
+        <div className="flex flex-wrap items-center justify-between gap-3 pt-3 border-t border-border/30">
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-muted-foreground">
+            <span>Est. {hospital.founded}</span>
+            <span className="flex items-center gap-1"><Phone className="w-3 h-3" />{hospital.phone}</span>
+            <span className="flex items-center gap-1"><Globe className="w-3 h-3" />{hospital.website}</span>
+          </div>
+          <a
+            href={`https://wa.me/919602362831?text=${encodeURIComponent(`Hi, I would like to book an appointment at ${hospital.name}. Please assist me.`)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-[#25D366] text-white px-4 py-2 rounded-full text-xs sm:text-sm font-medium hover:bg-[#20bd5a] transition-colors shadow-md hover:shadow-lg"
+          >
+            <svg viewBox="0 0 32 32" className="w-4 h-4" fill="currentColor">
+              <path d="M16.004 0h-.008C7.174 0 0 7.176 0 16c0 3.5 1.128 6.744 3.046 9.378L1.054 31.29l6.118-1.958A15.905 15.905 0 0016.004 32C24.826 32 32 24.822 32 16S24.826 0 16.004 0zm9.314 22.588c-.392 1.1-1.94 2.014-3.182 2.28-.848.18-1.956.324-5.684-1.222-4.772-1.976-7.836-6.82-8.074-7.138-.228-.318-1.918-2.554-1.918-4.872s1.214-3.456 1.644-3.928c.43-.472.94-.59 1.254-.59.314 0 .628.002.902.016.29.014.678-.11.96.732.294.872 1.008 2.992 1.096 3.21.088.218.148.472.028.762-.118.29-.178.472-.356.726-.178.254-.374.568-.534.762-.178.216-.364.45-.156.882.208.43.924 1.528 1.984 2.476 1.364 1.22 2.514 1.598 2.87 1.776.356.178.564.148.772-.09.208-.236.892-1.038 1.13-1.394.236-.356.472-.296.798-.178.326.118 2.064.974 2.418 1.152.356.178.592.266.68.414.086.148.086.862-.306 1.962z" />
+            </svg>
+            Book Appointment
+          </a>
         </div>
       </div>
     </div>
