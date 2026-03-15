@@ -4,7 +4,6 @@ import HospitalNetwork from "@/components/HospitalNetwork";
 import SpecialtiesSection from "@/components/SpecialtiesSection";
 import FeaturesSection from "@/components/FeaturesSection";
 import SavingsSection from "@/components/SavingsSection";
-import PricingSection from "@/components/PricingSection";
 import LowestQuotesSection from "@/components/LowestQuotesSection";
 import JourneySteps from "@/components/JourneySteps";
 import ZeroFeesSection from "@/components/ZeroFeesSection";
@@ -21,7 +20,6 @@ const Index = () => {
       <SpecialtiesSection />
       <FeaturesSection />
       <SavingsSection />
-      <PricingSection />
       <LowestQuotesSection />
       <JourneySteps />
       <ZeroFeesSection />
