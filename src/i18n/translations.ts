@@ -991,6 +991,7 @@ export const translations: Record<Language, TranslationKeys> = {
   },
   AM: {
     nav_hospitals: "ሆስፒታሎች",
+    nav_aboutUs: "ስለ እኛ",
     nav_specialties: "ስፔሻሊቲዎች",
     nav_howItWorks: "እንዴት ይሰራል",
     nav_testimonials: "ምስክርነቶች",
