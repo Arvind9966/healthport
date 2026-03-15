@@ -155,11 +155,9 @@ const TreatmentDetail = () => {
                       <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/10 flex items-center justify-center mb-3 group-hover:from-primary/20 group-hover:to-primary/10 group-hover:scale-105 transition-all duration-300">
                         <SubIcon className="w-7 h-7 sm:w-8 sm:h-8 text-primary" />
                       </div>
-                      <h3 className="text-[11px] sm:text-sm font-semibold text-foreground leading-tight mb-2 min-h-[2rem] sm:min-h-[2.5rem]">
+                      <h3 className="text-[11px] sm:text-sm font-semibold text-foreground leading-tight mb-3 min-h-[2rem] sm:min-h-[2.5rem]">
                         {sub.name}
                       </h3>
-                      <p className="text-[10px] sm:text-xs text-muted-foreground mb-0.5">Packages starting from</p>
-                      <p className="text-sm sm:text-base font-bold text-foreground mb-3">{sub.price}</p>
                       <a
                         href="https://wa.me/919876543210"
                         target="_blank"
@@ -220,7 +218,6 @@ const TreatmentDetail = () => {
                     <div key={proc.name} className="bg-background/80 backdrop-blur-sm border border-border/50 rounded-xl p-5 hover-lift">
                       <div className="flex flex-wrap items-start justify-between gap-2 mb-2">
                         <h3 className="font-semibold text-foreground text-sm sm:text-base">{proc.name}</h3>
-                        <span className="text-xs sm:text-sm font-bold text-primary bg-primary/10 px-3 py-1 rounded-full">{proc.cost}</span>
                       </div>
                       <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{proc.description}</p>
                     </div>
@@ -262,9 +259,6 @@ const TreatmentDetail = () => {
               <div className="p-5 sm:p-6" style={{
                 background: "linear-gradient(135deg, hsl(207 60% 97%) 0%, hsl(207 80% 92%) 50%, hsl(207 70% 95%) 100%)",
               }}>
-                <p className="text-xs text-muted-foreground font-medium uppercase tracking-wider mb-1">Packages starting from</p>
-                <p className="text-3xl sm:text-4xl font-bold text-foreground mb-4">{treatment.startingPrice}</p>
-
                 <p className="text-sm text-foreground font-medium mb-3">Need help choosing the right package?</p>
                 <a
                   href="https://wa.me/919876543210"
