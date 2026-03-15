@@ -51,7 +51,7 @@ const hospitalsData: HospitalDetail[] = [
     founded: "1983",
     phone: "+91 44 2829 0200",
     website: "apollohospitals.com",
-    imageUrl: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&q=80",
+    imageUrl: hospitalApollo,
   },
   {
     name: "Fortis Healthcare",
