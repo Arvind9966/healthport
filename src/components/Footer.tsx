@@ -1,4 +1,4 @@
-import { Facebook, Instagram } from "lucide-react";
+import { Facebook, Instagram, Mail } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const Footer = () => {
@@ -20,6 +20,9 @@ const Footer = () => {
             </a>
             <a href="https://www.instagram.com/healthroop?igsh=MXRpaXpoYWdubWMwMA==" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-8 h-8 xs:w-10 xs:h-10 bg-primary/10 hover:bg-gradient-to-br hover:from-[#f09433] hover:via-[#e6683c] hover:to-[#bc1888] text-primary hover:text-primary-foreground rounded-lg xs:rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-105">
               <Instagram className="w-3.5 h-3.5 xs:w-4 xs:h-4" />
+            </a>
+            <a href="mailto:healthroop@gmail.com" aria-label="Email" className="w-8 h-8 xs:w-10 xs:h-10 bg-primary/10 hover:bg-[#EA4335] text-primary hover:text-primary-foreground rounded-lg xs:rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-105">
+              <Mail className="w-3.5 h-3.5 xs:w-4 xs:h-4" />
             </a>
           </div>
         </div>
