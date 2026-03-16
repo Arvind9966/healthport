@@ -83,7 +83,9 @@ const JoinAsPartner = () => {
   const [agreeTerms, setAgreeTerms] = useState(false);
   const [agreeDownload, setAgreeDownload] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!fullName.trim() || !phone.trim() || !email.trim()) {
       toast({ title: "Missing fields", description: "Please fill in all required fields.", variant: "destructive" });
@@ -93,7 +95,24 @@ const JoinAsPartner = () => {
       toast({ title: "Terms required", description: "Please agree to the terms and conditions.", variant: "destructive" });
       return;
     }
-    toast({ title: "Application submitted!", description: "We'll review your application and get back to you soon." });
+    setLoading(true);
+    try {
+      const { error } = await supabase.from("partner_submissions").insert({
+        partner_type: partnerType,
+        full_name: fullName.trim(),
+        phone_code: phoneCode,
+        phone: phone.trim(),
+        email: email.trim(),
+        country,
+      });
+      if (error) throw error;
+      toast({ title: "Application submitted!", description: "We'll review your application and get back to you soon." });
+      setFullName(""); setPhone(""); setEmail("");
+    } catch (err: any) {
+      toast({ title: "Error", description: err.message || "Something went wrong.", variant: "destructive" });
+    } finally {
+      setLoading(false);
+    }
   };
 
   const scrollToForm = () => {
