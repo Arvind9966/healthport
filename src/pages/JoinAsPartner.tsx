@@ -307,8 +307,8 @@ const JoinAsPartner = () => {
               </div>
 
               {/* Submit */}
-              <button type="submit" className="w-full bg-primary text-primary-foreground py-2.5 xs:py-3 sm:py-3.5 rounded-lg font-medium text-sm xs:text-base sm:text-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2">
-                Next <ArrowRight className="w-4 h-4" />
+              <button type="submit" disabled={isSubmitting} className="w-full bg-primary text-primary-foreground py-2.5 xs:py-3 sm:py-3.5 rounded-lg font-medium text-sm xs:text-base sm:text-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2 disabled:opacity-60">
+                {isSubmitting ? "Submitting..." : "Next"} <ArrowRight className="w-4 h-4" />
               </button>
             </form>
           </div>
