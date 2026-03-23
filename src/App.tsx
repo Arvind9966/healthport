@@ -9,6 +9,7 @@ import Hospitals from "./pages/Hospitals";
 import AboutUs from "./pages/AboutUs";
 import TreatmentDetail from "./pages/TreatmentDetail";
 import NotFound from "./pages/NotFound";
+import Unsubscribe from "./pages/Unsubscribe";
 import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
