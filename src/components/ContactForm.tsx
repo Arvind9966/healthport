@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ArrowRight, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/i18n/LanguageContext";
-import { supabase } from "@/integrations/supabase/client";
+import { externalSupabase } from "@/lib/external-supabase";
 import { useToast } from "@/hooks/use-toast";
 
 const ContactForm = () => {
