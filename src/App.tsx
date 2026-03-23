@@ -9,6 +9,7 @@ import Hospitals from "./pages/Hospitals";
 import AboutUs from "./pages/AboutUs";
 import TreatmentDetail from "./pages/TreatmentDetail";
 import NotFound from "./pages/NotFound";
+import Unsubscribe from "./pages/Unsubscribe";
 import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/treatment/:slug" element={<TreatmentDetail />} />
           <Route path="/join-as-partner" element={<JoinAsPartner />} />
+          <Route path="/unsubscribe" element={<Unsubscribe />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
