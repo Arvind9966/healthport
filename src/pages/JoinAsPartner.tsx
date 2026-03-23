@@ -97,9 +97,7 @@ const JoinAsPartner = () => {
     }
     setIsSubmitting(true);
     try {
-      const id = crypto.randomUUID();
-      const { error } = await supabase.from("partner_submissions").insert({
-        id,
+      const { error } = await externalSupabase.from("partner_submissions").insert({
         full_name: fullName.trim(),
         email: email.trim(),
         phone: phone.trim(),
@@ -108,22 +106,6 @@ const JoinAsPartner = () => {
         country,
       });
       if (error) throw error;
-      // Send email notification
-      await supabase.functions.invoke("send-transactional-email", {
-        body: {
-          templateName: "partner-notification",
-          recipientEmail: "healthroop@gmail.com",
-          idempotencyKey: `partner-notify-${id}`,
-          templateData: {
-            fullName: fullName.trim(),
-            email: email.trim(),
-            phone: phone.trim(),
-            phoneCode,
-            partnerType,
-            country,
-          },
-        },
-      });
       toast({ title: "Application submitted!", description: "We'll review your application and get back to you soon." });
       setFullName(""); setPhone(""); setEmail(""); setAgreeTerms(false); setAgreeDownload(false);
     } catch (err: any) {
