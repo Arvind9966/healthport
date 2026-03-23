@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ArrowRight, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/i18n/LanguageContext";
-import { supabase } from "@/integrations/supabase/client";
+import { externalSupabase } from "@/lib/external-supabase";
 import { useToast } from "@/hooks/use-toast";
 
 const ContactForm = () => {
@@ -23,9 +23,7 @@ const ContactForm = () => {
     }
     setIsSubmitting(true);
     try {
-      const id = crypto.randomUUID();
-      const { error } = await supabase.from("contact_submissions").insert({
-        id,
+      const { error } = await externalSupabase.from("contact_submissions").insert({
         full_name: fullName.trim(),
         email: email.trim(),
         phone: phone.trim() || null,
@@ -33,21 +31,6 @@ const ContactForm = () => {
         condition_details: conditionDetails.trim() || null,
       });
       if (error) throw error;
-      // Send email notification
-      await supabase.functions.invoke("send-transactional-email", {
-        body: {
-          templateName: "contact-notification",
-          recipientEmail: "healthroop@gmail.com",
-          idempotencyKey: `contact-notify-${id}`,
-          templateData: {
-            fullName: fullName.trim(),
-            email: email.trim(),
-            phone: phone.trim() || undefined,
-            procedure: procedure || undefined,
-            conditionDetails: conditionDetails.trim() || undefined,
-          },
-        },
-      });
       toast({ title: "Submitted!", description: "We'll get back to you soon." });
       setFullName(""); setEmail(""); setPhone(""); setProcedure(""); setConditionDetails("");
     } catch (err: any) {
